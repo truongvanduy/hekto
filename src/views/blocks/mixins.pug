@@ -1,0 +1,8 @@
+mixin navContactGroup(href, src, alt, text, className="")
+  a.nav-contact__group(href= href class= className) 
+    img.nav-contact__icon(src= src, alt= alt)
+    span.nav-contact__text= text
+mixin navActionGroup(text, src, alt, className="")
+  .nav-action__group(class= className)
+    span.nav-action__text= text
+    img.nav-action__icon(src= src, alt= alt)

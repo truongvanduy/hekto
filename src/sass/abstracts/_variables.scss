@@ -1,13 +1,16 @@
-// Color
 :root {
+  // Color
   --primary-color: #FB2E86;
   --secondary-color: #19D16F;
   --heading-color: #151875;
   --text-color: #8A8FB9;
-
   --product-bgc: #F6F7FB;
+
+  // Spacing
+  --section-spacing: 128px;
 }
 
+// Color
 $primary-color: var(--primary-color);
 $secondary-color: var(--secondary-color);
 $violet-color: #7E33E0;

@@ -3,42 +3,61 @@
   font-weight: $fontWeight;
   line-height: $lineHeight;
 }
+// Use .heading.heading--[size] to adjust heading font-size, font-weight and line-height
 .heading {
   color: $heading-color;
-  &.heading {
-    &-xl {
-      @include font(53px, 700, 82px);
-    }
-    &-lg {
-      @include font(42px, 700, 50px);
-    }
-    &-md {
-      @include font(35px, 700, 46px);
-    }
-    &-sm {
-      @include font(26px, 600, 30px);
-    }
-    &-xs {
-      @include font(22px, 500, 26px);
-    }
+  font-family: $primary-font;
+  &--2xl {
+    @include font(53px, 700, 82px);
+  }
+  &--xl {
+    @include font(42px, 700, 50px);
+  }
+  &--lg {
+    @include font(35px, 700, 46px);
+  }
+  &--md {
+    @include font(26px, 600, 30px);
+  }
+  &--sm {
+    @include font(22px, 500, 26px);
+  }
+  &--xs {
+    @include font(20px, 400, 23px);
   }
 }
+.text {
+  &--lg {
+    @include font(18px, 400, 22px);
+  }
+  &--md {
+    @include font(16px, 400, 30px);
+  }
+  &--sm {
+    @include font(14px, 400, 16.41px);
+  }
+  &--xs {
+    @include font(12px, 400, 14px);
+  }
+}
+// Use .font--[...] to adjust font-family
 .font {
-  &-primary {
+  &--primary {
     font-family: $primary-font;
   }
-  &-secondary {
+  &--secondary {
     font-family: $secondary-font;
   }
 }
+// Use .color--[...] to adjust text color
 .color {
-  &-primary {
+  &--primary {
     color: $primary-color;
   }
-  &-heading {
+  &--heading {
     color: $heading-color;
   }
-  &-text {
+  &--text {
     color: $text-color;
   }
 }

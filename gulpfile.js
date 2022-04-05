@@ -41,6 +41,8 @@ gulp.task('run', gulp.series('pug', 'sass', 'copy images', 'copy js'));
 gulp.task('watch', () => {
   gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));
   gulp.watch('./src/views/**/*.pug', gulp.series('pug'));
+  gulp.watch('./src/images/**/*.*', gulp.series('copy images'));
+  gulp.watch('./src/js/**/*.js', gulp.series('copy js'));
 })
 
 // Run all

@@ -1,0 +1,14 @@
+.menu {
+  @include flexCenterY();
+  justify-content: flex-start;
+  gap: 0 35px;
+  padding-left: 7%;
+  width: fit-content;
+  &__link {
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

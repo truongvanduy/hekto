@@ -1,0 +1,17 @@
+ul.menu 
+  li.menu__item 
+    a.menu__link.color--heading(href="") Home
+  li.menu__item 
+    a.menu__link.color--heading(href="") Products
+  li.menu__item 
+    a.menu__link.color--heading(href="") Blog
+  li.menu__item 
+    a.menu__link.color--heading(href="") Contact
+  li.menu__item 
+    +navContactGroup("mailto: mhhasanul@gmail.com", "../images/base/mail.svg", "email", "mhhasanul@gmail.com", "mobile-nav-item")
+    +navContactGroup("tel: (12345)67890", "../images/base/phone.svg", "telephone", "(12345)67890", "mobile-nav-item")
+    +navActionGroup("Language", "../images/base/chevron-down.svg", "chevron down", "mobile-nav-item")
+    +navActionGroup("USD", "../images/base/chevron-down.svg", "chevron down", "mobile-nav-item")
+    +navActionGroup("Login", "../images/base/user.svg", "user", "mobile-nav-item")
+    +navActionGroup("Wishlist", "../images/base/heart.svg", "heart", "mobile-nav-item")
+    +navActionGroup("", "../images/base/cart.svg", "cart", "mobile-nav-item")

@@ -1,24 +1,19 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
-* {
-  margin: 0;
-}
-
 html,
 body {
   height: 100%;
 }
-
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 img,
 picture,
 video,
@@ -27,7 +22,6 @@ svg {
   display: block;
   max-width: 100%;
 }
-
 input,
 button,
 textarea,
@@ -36,7 +30,6 @@ select {
   outline: none;
   border: none;
 }
-
 p,
 h1,
 h2,

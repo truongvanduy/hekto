@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+}
+.nav {
+  &-top {
+    @include flexCenterY();
+    background-color: $violet-color;
+    color: white;
+    height: 44px;
+    & .nav__container {
+      justify-content: space-between;
+    }
+  }
+  &__container {
+    @include flexCenterY();
+    height: 100%;
+  }
+  &-contact {
+    @include flexCenterY();
+    gap: 0 48px;
+    &__group {
+      cursor: pointer;
+      @include flexCenterY();
+      gap: 0 10px;
+    }
+  }
+  &-action {
+    @include flexCenterY();
+    gap: 0 16px;
+    &__group {
+      cursor: pointer;
+      @include flexCenterY();
+      gap: 0 4px;
+    }
+    &__icon {
+      padding-bottom: 2px;
+    }
+  }
+  &-cart {
+    padding-left: 10px;
+  }
+  &-bottom {
+    height: 80px;
+  }
+}
+.mobile-nav-item {
+  display: none;
+}

@@ -1,0 +1,44 @@
+@mixin font($fontSize, $fontWeight, $lineHeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+.heading {
+  color: $heading-color;
+  &.heading {
+    &-xl {
+      @include font(53px, 700, 82px);
+    }
+    &-lg {
+      @include font(42px, 700, 50px);
+    }
+    &-md {
+      @include font(35px, 700, 46px);
+    }
+    &-sm {
+      @include font(26px, 600, 30px);
+    }
+    &-xs {
+      @include font(22px, 500, 26px);
+    }
+  }
+}
+.font {
+  &-primary {
+    font-family: $primary-font;
+  }
+  &-secondary {
+    font-family: $secondary-font;
+  }
+}
+.color {
+  &-primary {
+    color: $primary-color;
+  }
+  &-heading {
+    color: $heading-color;
+  }
+  &-text {
+    color: $text-color;
+  }
+}

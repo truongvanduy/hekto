@@ -1,0 +1,106 @@
+:root {
+  --primary-color: #FB2E86;
+  --secondary-color: #19D16F;
+  --heading-color: #151875;
+  --text-color: #8A8FB9;
+  --product-bgc: #F6F7FB;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.heading {
+  color: var(--heading-color);
+}
+.heading.heading-xl {
+  font-size: 53px;
+  font-weight: 700;
+  line-height: 82px;
+}
+.heading.heading-lg {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.heading.heading-md {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 46px;
+}
+.heading.heading-sm {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.heading.heading-xs {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.font-primary {
+  font-family: "Josefin Sans", sans-serif;
+}
+.font-secondary {
+  font-family: "Lato", sans-serif;
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+.color-heading {
+  color: var(--heading-color);
+}
+.color-text {
+  color: var(--text-color);
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+}

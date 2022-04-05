@@ -1,0 +1,7 @@
+@import "./abstracts/variables";
+@import "./base/reset";
+@import "./base/typography";
+
+html {
+  font-family: $primary-font;
+}

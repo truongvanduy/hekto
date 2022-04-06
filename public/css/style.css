@@ -568,7 +568,7 @@ ul {
   align-items: center;
   background-color: var(--heading-color);
   color: white;
-  font-size: 14px;
+  font-size: 10px;
 }
 @media screen and (max-width: 1199.98px) {
   .footer__heading {
@@ -596,6 +596,7 @@ ul {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
   }
   .footer__menu {
     grid-row: 2/3;
@@ -617,5 +618,6 @@ ul {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
   }
 }

@@ -4,8 +4,13 @@
 @import "./base/reset";
 @import "./base/breakpoints";
 @import "./base/typography";
-@import "./base/components";
+
+@import "./components/input";
+@import "./components/button";
+@import "./components/search";
+
 @import "./base/base";
 
 @import "./layout/header";
 @import "./layout/menu";
+@import "./layout/footer";

@@ -27,6 +27,7 @@
   }
 }
 .text {
+  color: $text-color;
   &--lg {
     @include font(18px, 400, 22px);
   }

@@ -1,0 +1,30 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  color: white;
+  font-size: 17px;
+  &--primary {
+    background-color: $primary-color;
+  }
+  &--secondary {
+    background-color: $secondary-color;
+  }
+  &--lg {
+    @include button(50px, 40px);
+  }
+  &--md {
+    @include button(45px, 24px);
+  }
+  &--sm {
+    height: 40px;
+  }
+  &--xs {
+    @include button(30px, 18px);
+    font-size: 12px;
+  }
+}

@@ -14,14 +14,15 @@
   flex-direction: column;
   background-color: white;
   box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: 0.1);
-}
-.logo {
+  &__logo {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
+  }
 }
+
 .nav {
   &-top {
     @include flexCenterY();

@@ -2,7 +2,7 @@
   @include flexCenterY();
   justify-content: flex-start;
   gap: 0 35px;
-  margin-left: 7%;
+  margin-left: calc(7% + 100px);
   margin-right: 35px;
   width: fit-content;
   &__link {
@@ -31,34 +31,40 @@
     position: relative;
   }
   &__line {
+    --line-height: 4px;
+    --transition-time: 0.2s;
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: var(--line-height);
     border-radius: 100rem;
     background-color: $heading-color;
-    transition: all 0.25s linear;
+    transition: top var(--transition-time) linear var(--transition-time), transform var(--transition-time) linear 0s, opacity var(--transition-time) linear var(--transition-time);
     &:nth-child(1) {
+      transform: rotate(0);
       top: 0;
     }
     &:nth-child(2) {
       top: 50%;
       transform: translateY(-50%);
+      opacity: 1;
     }
     &:nth-child(3) {
-      bottom: 0;
+      transform: rotate(0);
+      top: calc(100% - var(--line-height));
     }
   }
   &.opened &__line {
+    transition: top var(--transition-time) linear 0s, transform var(--transition-time) linear var(--transition-time), opacity var(--transition-time) linear 0s;
     &:nth-child(1) {
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
+      top: calc(50% - calc(var(--line-height) / 2));
+      transform: rotate(45deg);
     }
     &:nth-child(2) {
       opacity: 0;
     }
     &:nth-child(3) {
-      top: 50%;
-      transform: translateY(-50%) rotate(-45deg);
+      top: calc(50% - calc(var(--line-height) / 2));
+      transform: rotate(-45deg);
     }
   }
   @include aboveBreakpoint(map-get($breakpoints, "md")) {
@@ -71,34 +77,47 @@
     top: 0;
     right: 0;
     width: 100%;
-    max-width: 400px;
     height: 100%;
     z-index: 2;
     transform: translateX(100%);
-    padding: 80px 30px 30px;
+    padding: 80px 80px 30px;
     word-break: break-all;
-    box-shadow: -10px 0 10px 0 rgba($color: #000000, $alpha: 0.1);
-    transition: all 0.2s linear;
+    transition: all 0.25s linear;
+    @include sm {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
     &__item {
       width: 100%;
+      height: 40px;
+    }
+    &__link {
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
     &, &__nav-top {
       display:flex;
       align-items:flex-start;
       justify-content:flex-start;
       flex-direction:column;
-      gap: 20px 0;
+      gap: 10px 0;
       margin: 0;
       background-color: white;
       font-size: 20px;
     }
     &__nav-top {
       width: 100%;
+      flex: 1;
       border-top: 2px solid #eee;
       padding-top: 20px;
+      &-item {
+        display: flex;
+        height: 40px;
+      }
     }
-  }
-  .toggle-menu.opened ~ .menu {
-    transform: translateX(0);
+    &.opened {
+      transform: translateX(0);
+    }
   }
 }

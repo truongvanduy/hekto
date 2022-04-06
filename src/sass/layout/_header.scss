@@ -13,6 +13,14 @@
   justify-content: flex-start;
   flex-direction: column;
   background-color: white;
+  box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: 0.1);
+}
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
 }
 .nav {
   &-top {
@@ -69,7 +77,18 @@
       display: none;
     }
     &-contact__icon, &-action__icon {
-      display: none;
+      filter: invert(21%) sepia(100%) saturate(2801%) hue-rotate(259deg) brightness(89%) contrast(96%);
+    }
+    &-contact__icon {
+      width: 20px;
+    }
+    &-action {
+      &__group.mobile-reverse{
+        flex-direction: row-reverse;
+        & .nav-action__icon {
+          width: 20px;
+        }
+      }
     }
   }
 }

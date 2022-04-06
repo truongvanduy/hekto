@@ -1,4 +1,4 @@
-ul.menu 
+ul.menu.js-menu 
   li.menu__item.mobile
     .search 
       input(type="text").search__input
@@ -13,10 +13,10 @@ ul.menu
   li.menu__item 
     a.menu__link.color--heading(href="") Contact
   li.menu__item.mobile.menu__nav-top 
-    +navContactGroup("mailto: mhhasanul@gmail.com", "../images/base/mail.svg", "email", "mhhasanul@gmail.com")
-    +navContactGroup("tel: (12345)67890", "../images/base/phone.svg", "telephone", "(12345)67890")
-    +navActionGroup("Language", "../images/base/chevron-down.svg", "chevron down")
-    +navActionGroup("USD", "../images/base/chevron-down.svg", "chevron down")
-    +navActionGroup("Login", "../images/base/user.svg", "user")
-    +navActionGroup("Wishlist", "../images/base/heart.svg", "heart")
-    +navActionGroup("", "../images/base/cart.svg", "cart")
+    +navActionGroup("Login", "../images/base/user.svg", "user", "menu__nav-top-item mobile-reverse")
+    +navActionGroup("Wishlist", "../images/base/heart.svg", "heart", "menu__nav-top-item mobile-reverse")
+    +navActionGroup("Cart", "../images/base/cart.svg", "cart", "menu__nav-top-item mobile-reverse")
+    +navContactGroup("mailto: mhhasanul@gmail.com", "../images/base/mail.svg", "email", "mhhasanul@gmail.com", "menu__nav-top-item")
+    +navContactGroup("tel: (12345)67890", "../images/base/phone.svg", "telephone", "(12345)67890", "menu__nav-top-item")
+    +navActionGroup("Language", "../images/base/chevron-down.svg", "chevron down", "menu__nav-top-item")
+    +navActionGroup("USD", "../images/base/chevron-down.svg", "chevron down", "menu__nav-top-item")

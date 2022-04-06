@@ -14,8 +14,13 @@ header.header
     .nav-bottom
       .container.nav__container
         a.heading.heading--lg.logo(href="./index.html") Hekto
+        button.toggle-menu.btn.btn--sm.mobile(onclick="this.classList.toggle('opened')")
+          .toggle-menu__bars 
+            .toggle-menu__line
+            .toggle-menu__line
+            .toggle-menu__line
         include ../blocks/menu
-        .search 
+        .search.above-mobile 
           input(type="text").search__input
           button.btn.btn--primary.btn--sm.search__btn
             img(src="../images/base/search.svg", alt="search")

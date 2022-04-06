@@ -31,20 +31,33 @@
           </div>
           <div class="nav-bottom">
             <div class="container nav__container"><a class="heading heading--lg logo" href="./index.html">Hekto</a>
+              <button class="toggle-menu btn btn--sm mobile" onclick="this.classList.toggle('opened')">
+                <div class="toggle-menu__bars"> 
+                  <div class="toggle-menu__line"></div>
+                  <div class="toggle-menu__line"></div>
+                  <div class="toggle-menu__line"></div>
+                </div>
+              </button>
               <ul class="menu"> 
+                <li class="menu__item mobile">
+                  <div class="search"> 
+                    <input class="search__input" type="text">
+                    <button class="btn btn--primary btn--sm search__btn"><img src="../images/base/search.svg" alt="search"></button>
+                  </div>
+                </li>
                 <li class="menu__item"> <a class="menu__link color--heading" href="">Home</a></li>
                 <li class="menu__item"> <a class="menu__link color--heading" href="">Products</a></li>
                 <li class="menu__item"> <a class="menu__link color--heading" href="">Blog</a></li>
                 <li class="menu__item"> <a class="menu__link color--heading" href="">Contact</a></li>
-                <li class="menu__item"> <a class="nav-contact__group mobile-nav-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group mobile-nav-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
-                  <div class="nav-action__group mobile-nav-item"><span class="nav-action__text">Language</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
-                  <div class="nav-action__group mobile-nav-item"><span class="nav-action__text">USD</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
-                  <div class="nav-action__group mobile-nav-item"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></div>
-                  <div class="nav-action__group mobile-nav-item"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></div>
-                  <div class="nav-action__group mobile-nav-item"><span class="nav-action__text"></span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></div>
+                <li class="menu__item mobile menu__nav-top"> <a class="nav-contact__group" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
+                  <div class="nav-action__group"><span class="nav-action__text">Language</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
+                  <div class="nav-action__group"><span class="nav-action__text">USD</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
+                  <div class="nav-action__group"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></div>
+                  <div class="nav-action__group"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></div>
+                  <div class="nav-action__group"><span class="nav-action__text"></span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></div>
                 </li>
               </ul>
-              <div class="search"> 
+              <div class="search above-mobile"> 
                 <input class="search__input" type="text">
                 <button class="btn btn--primary btn--sm search__btn"><img src="../images/base/search.svg" alt="search"></button>
               </div>

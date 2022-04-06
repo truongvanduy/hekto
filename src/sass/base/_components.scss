@@ -51,4 +51,12 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+  @include md {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: unset;
+    &__input {
+      width: 100%;
+    }
+  }
 }

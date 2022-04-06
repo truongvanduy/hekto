@@ -20,6 +20,9 @@
     background-color: $violet-color;
     color: white;
     height: 44px;
+    @include lg {
+      font-size: 14px;
+    }
     & .nav__container {
       justify-content: space-between;
     }
@@ -27,10 +30,14 @@
   &__container {
     @include flexCenterY();
     height: 100%;
+    position: relative;
   }
   &-contact {
     @include flexCenterY();
     gap: 0 48px;
+    @include lg {
+      gap: 0 20px;
+    }
     &__group {
       cursor: pointer;
       @include flexCenterY();
@@ -56,6 +63,13 @@
     height: 80px;
   }
 }
-.mobile-nav-item {
-  display: none;
+@include md {
+  .nav{
+    &-top {
+      display: none;
+    }
+    &-contact__icon, &-action__icon {
+      display: none;
+    }
+  }
 }

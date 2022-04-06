@@ -15,11 +15,14 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 1210px;
+  max-width: 1220px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+main {
+  margin-top: 124px;
 }
 a {
   color: inherit;
@@ -27,4 +30,14 @@ a {
 }
 ul {
   list-style: none;
+}
+@include aboveBreakpoint(map-get($breakpoints, "md")) {
+  .mobile {
+    display: none;
+  }
+}
+@include underBreakpoint(map-get($breakpoints, "md")) {
+  .above-mobile {
+    display: none;
+  }
 }

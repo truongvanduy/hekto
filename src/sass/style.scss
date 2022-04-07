@@ -1,16 +1,21 @@
+@import "./abstracts/breakpoints";
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
 @import "./base/reset";
-@import "./base/breakpoints";
 @import "./base/typography";
+@import "./base/base";
 
 @import "./components/input";
 @import "./components/button";
 @import "./components/search";
+@import "./components/img-item";
+@import "./components/banner";
 
-@import "./base/base";
-
+@import "./layout/grid";
+@import "./layout/layout";
 @import "./layout/header";
 @import "./layout/menu";
 @import "./layout/footer";
+
+@import "./pages/home";

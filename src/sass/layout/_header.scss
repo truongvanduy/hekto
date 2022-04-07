@@ -28,7 +28,7 @@
     @include flexCenterY();
     background-color: $violet-color;
     color: white;
-    height: 44px;
+    height: var(--nav-top-height);
     @include lg {
       font-size: 14px;
     }
@@ -69,7 +69,7 @@
     padding-left: 10px;
   }
   &-bottom {
-    height: 80px;
+    height: var(--nav-bottom-height);
   }
 }
 @include md {

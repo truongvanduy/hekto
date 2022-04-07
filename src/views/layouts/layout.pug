@@ -3,6 +3,7 @@ block mixins
 block vars
   -title = 'Hekto'
   -bodyClass = ''
+  -mainClass = ''
 
 doctype html
 html(lang='en')
@@ -21,7 +22,7 @@ html(lang='en')
     .wrapper
       block header  
         include ../blocks/header
-      main
+      main(class= mainClass)
         block container
       block footer
         include ../blocks/footer

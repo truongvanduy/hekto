@@ -1,0 +1,29 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--section-spacing) 0;
+}
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  padding-left: calc(2 * var(--gutter));
+  padding-right: calc(2 * var(--gutter));
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  margin-top: var(--header-height);
+}
+@include aboveBreakpoint(map-get($breakpoints, "md")) {
+  .mobile {
+    display: none;
+  }
+}
+@include underBreakpoint(map-get($breakpoints, "md")) {
+  .above-mobile {
+    display: none;
+  }
+}

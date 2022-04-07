@@ -8,6 +8,13 @@
 
   // Spacing
   --section-spacing: 128px;
+  --nav-top-height: 44px;
+  --nav-bottom-height: 80px;
+  @include md {
+    --nav-top-height: 0px;
+    --nav-bottom-height: 70px;
+  }
+  --header-height: calc(var(--nav-bottom-height) + var(--nav-top-height));
 }
 
 // Color

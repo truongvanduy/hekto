@@ -15,11 +15,11 @@
   background-color: white;
   box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: 0.1);
   &__logo {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
+    position: absolute;
+    left: calc(2 * var(--gutter));
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
   }
 }
 
@@ -73,7 +73,7 @@
   }
 }
 @include md {
-  .nav{
+  .nav {
     &-top {
       display: none;
     }
@@ -84,7 +84,7 @@
       width: 20px;
     }
     &-action {
-      &__group.mobile-reverse{
+      &__group.mobile-reverse {
         flex-direction: row-reverse;
         & .nav-action__icon {
           width: 20px;

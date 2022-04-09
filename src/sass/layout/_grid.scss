@@ -1,6 +1,6 @@
 :root {
   --gutter: 15px;
-  --container-width: calc(1180px + calc(2 * var(--gutter)));
+  --container-width: calc(1180px + calc(4 * var(--gutter)));
   @include md {
     --gutter: 10px;
   }

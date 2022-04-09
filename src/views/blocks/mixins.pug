@@ -8,9 +8,68 @@ mixin navActionGroup(text, src, alt, className="")
     span.nav-action__text= text
     img.nav-action__icon(src= src, alt= alt)
 
-mixin imgItem(itemClass, imgClass, contentClass, imgSrc, alt="")
-  .img-item(class= itemClass)
-    .img-item__img(class= imgClass)
-      img(src= imgSrc, alt= alt)
-    .img-item__content(class= contentClass)
-      block 
+mixin productActionSet(setClass)
+  .product-action(class= setClass)
+    block 
+
+mixin productActionItem(itemClass="", iconClass="")
+  button.product-action__item(class= itemClass)
+    i(class= iconClass)
+
+mixin featuredProductItem(heading, code, price, imgSrc, alt="")
+  .col.col-3.xl-3.lg-6.md-6.sm-12 
+    figure.product-featured-item.product-item.action-horizontal  
+      .product-featured-item__top.product-item__top 
+        .product-featured-item__img.product-item__img 
+          img(srcSet= imgSrc , alt= alt)
+        +productActionSet("product-action--horizontal")
+          +productActionItem("","fa-solid fa-cart-plus")
+          +productActionItem("","fa-regular fa-heart")
+          +productActionItem("","fa-solid fa-magnifying-glass")
+      .product-featured-item__bottom.product-item__bottom 
+        figcaption.product-featured-item__heading.text.text-lg.text-center.color-primary.font-secondary= heading
+        .product-featured-item__desc.text.text-sm.text-center.color-heading 
+          p.product-featured-item__code= code
+          p.product-featured-item__price= price
+
+mixin latestProductItem(heading, newPrice, oldPrice, imgSrc)
+  .col.col-4.xl-4.lg-6.md-6.sm-12 
+    figure.product-latest-item.product-item.action-vertical
+      .product-latest-item__top.product-item__top 
+        .product-latest-item__img.product-item__img 
+          img(srcSet= imgSrc , alt= heading)
+        +productActionSet("product-action--vertical")
+          +productActionItem("","fa-solid fa-cart-plus")
+          +productActionItem("","fa-regular fa-heart")
+          +productActionItem("","fa-solid fa-magnifying-glass")
+      .product-latest-item__bottom.product-item__bottom 
+        figcaption.product-latest-item__heading.text.text-lg.color-heading.font-primary= heading
+        .product-latest-item-price
+          span.product-latest-item-price__new.text.text-md.color-heading= newPrice
+          del.product-latest-item-price__old.text.text-sm= oldPrice
+
+mixin offerItem(heading, desc, imgSrc)
+  .col.col-3.xl-3.lg-6.md-6.sm-12 
+    figure.offer-item
+      .offer-item__top 
+        .offer-item__img 
+          img(srcSet= imgSrc , alt= heading)
+      .offer-item__bottom
+        figcaption.offer-item__heading.heading.heading-sm.heading-center.color-heading.font-primary= heading
+        p.offer-item__desc.text.text-md.text-center.font-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
+
+mixin trendingProductItem(heading, newPrice, oldPrice, imgSrc)
+  .col.col-3.xl-3.lg-6.md-6.sm-12 
+    figure.product-trending-item.product-item.action-horizontal  
+      .product-trending-item__top.product-item__top 
+        .product-trending-item__img.product-item__img 
+          img(srcSet= imgSrc , alt= heading)
+        +productActionSet("product-action--horizontal")
+          +productActionItem("","fa-solid fa-cart-plus")
+          +productActionItem("","fa-regular fa-heart")
+          +productActionItem("","fa-solid fa-magnifying-glass")
+      .product-trending-item__bottom.product-item__bottom 
+        figcaption.product-trending-item__heading.text.text-lg.text-center.color-primary.font-secondary= heading
+        .product-trending-item-price.text.text-sm.text-center.color-heading 
+          span.product-trending-item-price__new= newPrice
+          del.product-trending-item-price__old= oldPrice

@@ -1,7 +1,0 @@
-.home-main {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  flex-direction: column;
-  gap: var(--section-spacing) 0;
-}

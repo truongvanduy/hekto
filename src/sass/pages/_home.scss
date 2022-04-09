@@ -67,4 +67,65 @@
       }
     }
   }
+  &-trending {
+    &__heading {
+      margin-bottom: 40px;
+    }
+    &-item {
+      padding: 12px;
+      border: 2px solid #eee;
+      transition: all 0.2s linear;
+      gap: 15px;
+      &:hover {
+        border-color: transparent;
+        box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+      }
+      &__top {
+        background-color: #f5f6f8;
+        height: 260px;
+      }
+      &__heading {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      &-price {
+        &__old {
+          opacity: 0.3;
+        }
+        margin-bottom: 20px;
+      }
+    }
+    &-collection {
+      &-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 34px;
+        padding-left: 25px;
+        &--pink {
+          background-color: #FFF6FB;
+        }
+        &--purple {
+          background-color: #EEEFFB;
+        }
+        &__heading {
+          margin-bottom: 12px;
+        }
+        &__link {
+          text-decoration: underline;
+        }
+        &__img {
+          align-self: flex-end;
+          margin-top: auto;
+          position: relative;
+          transform: translateY(-30px);
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
 }

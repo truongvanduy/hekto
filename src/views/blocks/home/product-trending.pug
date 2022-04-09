@@ -2,17 +2,21 @@ section.product-trending
   h2.product-trending__heading.heading.heading-xl.heading-center Trending Products 
   .grid.wide.product-trending__list 
     .row 
-      .col.col-3.xl-3.lg-6.md-6.sm-12 
-        figure.product-trending-item.product-item.action-horizontal  
-          .product-trending-item__top.product-item__top 
-            .product-trending-item__img.product-item__img 
-              img(srcSet= imgSrc , alt= alt)
-            +productActionSet("product-action--horizontal")
-              +productActionItem("","fa-solid fa-cart-plus")
-              +productActionItem("","fa-regular fa-heart")
-              +productActionItem("","fa-solid fa-magnifying-glass")
-          .product-trending-item__bottom.product-item__bottom 
-            figcaption.product-trending-item__heading.text.text-lg.text-center.color-primary.font-secondary= heading
-            .product-trending-item-price.text.text-sm.text-center.color-heading 
-              span.product-trending-item-price__new= code
-              span.product-trending-item-price__old= price
+      +trendingProductItem("Cantilever chair", "$26.00", "$42.00", "../images/home/trending-product-1.png 2x")
+      +trendingProductItem("Cantilever chair", "$26.00", "$42.00", "../images/home/trending-product-4.png 2x")
+      +trendingProductItem("Cantilever chair", "$26.00", "$42.00", "../images/home/trending-product-2.png 2x")
+      +trendingProductItem("Cantilever chair", "$26.00", "$42.00", "../images/home/trending-product-3.png 2x")
+  .grid.wide.product-trending-collection 
+    .row 
+      .col.col-6.xl-6.lg-12.md-12.sm-12
+        .product-trending-collection-item.product-trending-collection-item--pink
+          h5.product-trending-collection-item__heading.heading.heading-md 23% off in all products
+          a.product-trending-collection-item__link.color-primary(href="#!") Shop Now
+          .product-trending-collection-item__img 
+            img(srcSet="../images/home/collection-1.png 2x", alt="Clock")
+      .col.col-6.xl-6.lg-12.md-12.sm-12
+        .product-trending-collection-item.product-trending-collection-item--purple
+          h5.product-trending-collection-item__heading.heading.heading-md 23% off in all products
+          a.product-trending-collection-item__link.color-primary(href="#!") Shop Now
+          .product-trending-collection-item__img 
+            img(srcSet="../images/home/collection-2.png 2x", alt="Clock")

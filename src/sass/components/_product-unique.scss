@@ -1,7 +1,7 @@
 .product-unique {
   background-color: $banner-bgc;
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 20px;
   &__img img {
     width: 100%;
     height: 100%;
@@ -30,7 +30,7 @@
   }
   &__dot {
     position: relative;
-    transform: translateY(4px);
+    transform: translateY(8px);
     width: 12px;
     height: 12px;
     border-radius: 100rem;
@@ -44,6 +44,9 @@
     &--green {
       background-color: #2BF5CC;
     }
+  }
+  &__text {
+    color: #ACABC3;
   }
   &__action {
     display: flex;

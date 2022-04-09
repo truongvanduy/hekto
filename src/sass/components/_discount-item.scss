@@ -1,0 +1,57 @@
+.discount-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.02em;
+  &__content {
+    width: 50%;
+  }
+  &__heading {
+    margin-bottom: 16px;
+  }
+  &__name {
+    display: inline-block;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &__desc {
+    color: #B7BACB;
+    margin-bottom: 28px;
+  }
+  &-feature.col {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  &-feature {
+    &__check {
+      padding-top: 4px;
+    }
+    &__text {
+      color: #B7BACB;
+    }
+    &__container {
+      margin-bottom: 35px;
+    }
+    &-img {
+      flex: 1;
+    }
+  }
+  @include lg {
+    flex-direction: column;
+    text-align: center;
+    &__content {
+      width: 100%;
+    }
+    &-feature {
+      justify-content: center;
+    }
+    &__btn {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -14,8 +14,8 @@
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding-left: calc(2 * var(--gutter));
-  padding-right: calc(2 * var(--gutter));
+  padding-left: calc(1 * var(--gutter));
+  padding-right: calc(1 * var(--gutter));
 }
 .row {
   display: flex;

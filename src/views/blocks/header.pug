@@ -13,13 +13,13 @@ header.header
           +navActionGroup("", "../images/base/cart.svg", "cart", ".nav-cart")
     .nav-bottom
       .container.nav__container
+        include ../blocks/menu
         a.heading.heading-lg.logo.header__logo(href="./index.html") Hekto
         button.toggle-menu.btn.btn--sm.mobile.js-toggle-menu
           .toggle-menu__bars 
             .toggle-menu__line
             .toggle-menu__line
             .toggle-menu__line
-        include ../blocks/menu
         .search.above-mobile 
           input(type="text").search__input
           button.btn.btn--primary.btn--sm.search__btn

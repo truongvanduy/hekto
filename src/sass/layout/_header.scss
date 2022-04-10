@@ -16,10 +16,18 @@
   box-shadow: 0 4px 10px 0 rgba($color: #000000, $alpha: 0.1);
   &__logo {
     position: absolute;
-    left: calc(2 * var(--gutter));
+    left: calc(1 * var(--gutter));
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
+    line-height: 1;
+    transition: all 0.2s linear;
+    .menu.opened ~ & {
+      left: 80px;
+      @include sm {
+        left: var(--gutter);
+      }
+    }
   }
 }
 

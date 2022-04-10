@@ -1,0 +1,16 @@
+body::-webkit-scrollbar {
+  width: 12px;
+  &-track {
+    background-color: #ffffff;
+  }
+  &-thumb {
+    background-color: #FB2E8666;
+    opacity: 0.3;
+    &:hover {
+      background-color: #FB2E8699;
+    }
+    &:active {
+      background-color: #FB2E86BB;
+    }
+  }
+}

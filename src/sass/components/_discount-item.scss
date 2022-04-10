@@ -1,12 +1,17 @@
 .discount-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  letter-spacing: 0.02em;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 0.02em;
+  }
+  &__heading {
+    margin-bottom: 40px;
+  }
   &__content {
     width: 50%;
   }
-  &__heading {
+  &__title {
     margin-bottom: 16px;
   }
   &__name {
@@ -39,8 +44,13 @@
     }
   }
   @include lg {
-    flex-direction: column;
-    text-align: center;
+    &__container {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    &__img {
+      margin-bottom: 40px;
+    }
     &__content {
       width: 100%;
     }
@@ -51,7 +61,6 @@
       position: relative;
       left: 50%;
       transform: translateX(-50%);
-      margin-bottom: 40px;
     }
   }
 }

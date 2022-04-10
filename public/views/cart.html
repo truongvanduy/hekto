@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Hekto: Cart</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"> 
+        <nav class="nav"> 
+          <div class="nav-top"> 
+            <div class="container nav__container"> 
+              <div class="nav-contact"> <a class="nav-contact__group" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
+              </div>
+              <div class="nav-action"> 
+                <div class="nav-action__group"><span class="nav-action__text">Language</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
+                <div class="nav-action__group"><span class="nav-action__text">USD</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
+                <div class="nav-action__group"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></div>
+                <div class="nav-action__group"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></div>
+                <div class="nav-action__group .nav-cart"><span class="nav-action__text"></span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-bottom">
+            <div class="container nav__container">
+              <ul class="menu js-menu"> 
+                <li class="menu__item mobile">
+                  <div class="search"> 
+                    <input class="search__input" type="text">
+                    <button class="btn btn--primary btn--sm search__btn"><img src="../images/base/search.svg" alt="search"></button>
+                  </div>
+                </li>
+                <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./home.html">Home</a></li>
+                <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./product.html">Products</a></li>
+                <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./blog.html">Blog</a></li>
+                <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./contact.html">Contact</a></li>
+                <li class="menu__item mobile menu__nav-top"> 
+                  <div class="nav-action__group menu__nav-top-item mobile-reverse"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></div>
+                  <div class="nav-action__group menu__nav-top-item mobile-reverse"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></div>
+                  <div class="nav-action__group menu__nav-top-item mobile-reverse"><span class="nav-action__text">Cart</span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></div><a class="nav-contact__group menu__nav-top-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group menu__nav-top-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
+                  <div class="nav-action__group menu__nav-top-item"><span class="nav-action__text">Language</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
+                  <div class="nav-action__group menu__nav-top-item"><span class="nav-action__text">USD</span><img class="nav-action__icon" src="../images/base/chevron-down.svg" alt="chevron down"/></div>
+                </li>
+              </ul><a class="heading heading-lg logo header__logo" href="./index.html">Hekto</a>
+              <button class="toggle-menu btn btn--sm mobile js-toggle-menu">
+                <div class="toggle-menu__bars"> 
+                  <div class="toggle-menu__line"></div>
+                  <div class="toggle-menu__line"></div>
+                  <div class="toggle-menu__line"></div>
+                </div>
+              </button>
+              <div class="search above-mobile"> 
+                <input class="search__input" type="text">
+                <button class="btn btn--primary btn--sm search__btn"><img src="../images/base/search.svg" alt="search"></button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+      </main>
+      <footer class="footer"> 
+        <div class="footer-top"> 
+          <div class="container footer__container grid wide"> 
+            <form class="footer-form footer__group" action="#"> 
+              <div class="logo heading heading-lg footer__logo">Hekto</div>
+              <div class="footer-form__group">
+                <input class="footer-form__input input input--md" type="email" placeholder="Your email" required>
+                <button class="btn btn--sm btn--primary footer-form__submit">Sign Up</button>
+              </div>
+              <div class="footer-form__text"> 
+                <p class="footer__text text text-md">Contact Info</p>
+                <p class="footer__text text text-md">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+              </div>
+            </form>
+            <div class="footer__group footer__menu"> 
+              <div class="heading heading-sm footer__heading">Categories</div>
+              <ul class="footer__list"> 
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Laptops & Computers</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Cameras & Photography</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Smart Phones & Tablets</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Video Games & Consoles</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Waterproof Headphones</a></li>
+              </ul>
+            </div>
+            <div class="footer__group footer__menu"> 
+              <div class="heading heading-sm footer__heading">Customer Care </div>
+              <ul class="footer__list"> 
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">My Account</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Discount</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Returns</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Orders History</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Order Tracking</a></li>
+              </ul>
+            </div>
+            <div class="footer__group footer__menu"> 
+              <div class="heading heading-sm footer__heading">Pages </div>
+              <ul class="footer__list"> 
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Blog</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Browse the Shop</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Category</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Pre-Built Pages</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">Visual Composer Elements</a></li>
+                <li class="footer__item"> <a class="footer__link footer__text" href="#!">WooCommerce Pages</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom"> 
+          <div class="footer-bottom__container container">
+            <p class="footer__rights footer__text">©Webecy - All Rights Reserved</p>
+            <div class="footer-social"> <a class="footer-social__link" href="#!"><i class="fa-brands fa-facebook-f"></i></a><a class="footer-social__link" href="#!"><i class="fa-brands fa-instagram"></i></a><a class="footer-social__link" href="#!"><i class="fa-brands fa-twitter"></i></a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

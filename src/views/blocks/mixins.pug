@@ -73,3 +73,17 @@ mixin trendingProductItem(heading, newPrice, oldPrice, imgSrc)
         .product-trending-item-price.text.text-sm.text-center.color-heading 
           span.product-trending-item-price__new= newPrice
           del.product-trending-item-price__old= oldPrice
+
+mixin topProductItem(heading, price, imgSrc)
+  .col.col-3.xl-6.lg-6.md-6.sm-12 
+    figure.product-top-item.product-item.action-rounded  
+      .product-top-item__top.product-item__top 
+        .product-top-item__img.product-item__img 
+          img(srcSet= imgSrc , alt= heading)
+        +productActionSet("product-action--rounded")
+          +productActionItem("","fa-solid fa-cart-plus")
+          +productActionItem("","fa-regular fa-heart")
+          +productActionItem("","fa-solid fa-magnifying-glass")
+      .product-top-item__bottom.product-item__bottom 
+        figcaption.product-top-item__heading.heading.heading-xs.heading-center.font-primary= heading
+        span.product-top-item__price.text.text-md.text-center.color-heading= price

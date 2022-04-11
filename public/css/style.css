@@ -177,14 +177,14 @@ body::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(251, 46, 134, 0.4);
-  opacity: 0.3;
+  border-radius: 100rem;
+  background-color: rgba(21, 24, 117, 0.2);
 }
 body::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(251, 46, 134, 0.6);
+  background-color: rgba(21, 24, 117, 0.4);
 }
 body::-webkit-scrollbar-thumb:active {
-  background-color: rgba(251, 46, 134, 0.7333333333);
+  background-color: rgba(21, 24, 117, 0.6);
 }
 
 .input {
@@ -286,6 +286,14 @@ body::-webkit-scrollbar-thumb:active {
   padding-bottom: 60px;
   padding-top: 0;
 }
+.product-item.action-rounded .product-item__top {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.product-item.action-rounded:hover .product-item__top {
+  padding-bottom: 45px;
+  padding-top: 15px;
+}
 .product-item.action-vertical .product-item__top {
   padding-left: 30px;
   padding-right: 30px;
@@ -312,7 +320,7 @@ body::-webkit-scrollbar-thumb:active {
   transform: translate(-100%, -50%);
   left: 0;
 }
-.product-action--horizontal {
+.product-action--horizontal, .product-action--rounded {
   left: 50%;
   transform: translate(-50%, 100%);
   bottom: 0;
@@ -375,10 +383,51 @@ body::-webkit-scrollbar-thumb:active {
 .product-item:hover .product-action--horizontal .product-action__item {
   transform: translateY(-150%);
 }
+.product-item:hover .product-action--rounded .product-action__item {
+  transform: translateY(-170%);
+}
+.product-item:hover .product-action--rounded .product-action__item:nth-child(2) {
+  transform: translateY(-130%);
+}
 
 .product-item {
   position: relative;
   overflow: hidden;
+}
+
+.product-top-item {
+  --shadow-space: 4px;
+  padding-left: var(--shadow-space);
+  padding-right: var(--shadow-space);
+  overflow: unset;
+  align-items: center;
+}
+.product-top-item__top {
+  background-color: var(--product-bgc);
+  width: 270px;
+  height: 270px;
+  border-radius: 100rem;
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+  transition: all 0.2s linear;
+  margin-bottom: 27px;
+  flex-shrink: 0;
+}
+.product-top-item:hover .product-top-item__top {
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05), -4px 4px 0 0 #9877e7;
+}
+.product-top-item__img {
+  height: 160px;
+}
+.product-top-item__bottom {
+  text-align: center;
+}
+.product-top-item:hover .product-top-item__bottom {
+  border-color: transparent;
+}
+.product-top-item__heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .banner {

@@ -4,13 +4,13 @@ body::-webkit-scrollbar {
     background-color: #ffffff;
   }
   &-thumb {
-    background-color: #FB2E8666;
-    opacity: 0.3;
+    border-radius: 100rem;
+    background-color: #15187533;
     &:hover {
-      background-color: #FB2E8699;
+      background-color: #15187566;
     }
     &:active {
-      background-color: #FB2E86BB;
+      background-color: #15187599;
     }
   }
 }

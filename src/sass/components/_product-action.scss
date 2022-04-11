@@ -9,7 +9,7 @@
     transform: translate(-100%, -50%);
     left: 0;
   }
-  &--horizontal {
+  &--horizontal, &--rounded {
     left: 50%;
     transform: translate(-50%, 100%);
     bottom: 0;
@@ -73,6 +73,12 @@
   }
   .product-item:hover &--horizontal &__item {
     transform: translateY(-150%);
+  }
+  .product-item:hover &--rounded &__item {
+    transform: translateY(-170%);
+  }
+  .product-item:hover &--rounded &__item:nth-child(2) {
+    transform: translateY(-130%);
   }
 }
 

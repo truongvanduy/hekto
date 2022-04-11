@@ -22,6 +22,16 @@
       padding-top: 0;
     }
   }
+  &.action-rounded {
+    & .product-item__top {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &:hover .product-item__top {
+      padding-bottom: 45px;
+      padding-top: 15px;
+    }
+  }
   &.action-vertical {
     & .product-item__top {
       padding-left: 30px;

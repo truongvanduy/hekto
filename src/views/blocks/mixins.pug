@@ -87,3 +87,19 @@ mixin topProductItem(heading, price, imgSrc)
       .product-top-item__bottom.product-item__bottom 
         figcaption.product-top-item__heading.heading.heading-xs.heading-center.font-primary= heading
         span.product-top-item__price.text.text-md.text-center.color-heading= price
+
+mixin homeBlogItem(heading, author, date, desc, imgSrc)
+  figure.home-blog-item 
+    .home-blog-item__img 
+      img(srcSet= imgSrc, alt= heading)
+    .home-blog-item__info.text.text-sm.color-heading.font-primary.color-heading   
+      .home-blog-item__info-group 
+        img(src="../images/home/sign.svg", alt="sign")
+        span.home-blog-item__author= author 
+      .home-blog-item__info-group  
+        img.home-blog-item__date-img(src="../images/home/date.svg", alt="calendar")
+        time.home-blog-item__time= date
+    .home-blog-item__content 
+      figcaption.home-blog-item__heading.text.text-lg.color-heading.font-primary= heading
+      p.home-blog-item__desc.text.text-md.font-secondary= desc
+      a(href="#!").home-blog-item__cta.text.text-md.font-secondary.color-heading Read more

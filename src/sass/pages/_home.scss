@@ -6,6 +6,47 @@
     flex-direction: column;
     gap: var(--section-spacing) 0;
   }
+  &-blog {
+    &__heading {
+      margin-bottom: 48px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: calc(2 * var(--gutter));
+    }
+    --blog-item-width: 40%;
+    @include lg {
+      &__list {
+        justify-content: flex-start;
+        grid-auto-columns: var(--blog-item-width);
+        grid-auto-flow: column;
+        grid-gap: 1.5rem;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+      }
+      &__list::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+      &__list > * {
+        scroll-snap-align: start;
+      }
+    }
+    @include md {
+      --blog-item-width: 60%;
+    }
+    @include sm {
+      --blog-item-width: 90%;
+    }
+  }
 }
 .product {
   &__heading {

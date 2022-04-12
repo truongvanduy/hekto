@@ -1,0 +1,41 @@
+.banner-sale {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.05)), url('../images/home/sofa-sale-off.jpg');
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100vh;
+  overflow: hidden;
+  &__container {
+    padding-left: calc(2 * var(--gutter));
+    padding-right: calc(2 * var(--gutter));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba($color: #fff, $alpha: 0.75);
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  &__heading {
+    margin-bottom: 20px;
+  }
+  &__desc {
+    margin-bottom: 32px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+}

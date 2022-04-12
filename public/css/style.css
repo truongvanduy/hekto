@@ -687,6 +687,116 @@ body::-webkit-scrollbar-thumb:active {
   }
 }
 
+.banner-sale {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.05)), url("../images/home/sofa-sale-off.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100vh;
+  overflow: hidden;
+}
+.banner-sale__container {
+  padding-left: calc(2 * var(--gutter));
+  padding-right: calc(2 * var(--gutter));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-sale__content {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.banner-sale__heading {
+  margin-bottom: 20px;
+}
+.banner-sale__desc {
+  margin-bottom: 32px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.home-blog-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 8px 30px rgba(49, 32, 138, 0.05);
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.home-blog-item__img {
+  width: 100%;
+  height: 255px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.home-blog-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-blog-item__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 0 30px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+}
+.home-blog-item__info-group {
+  display: flex;
+  align-items: center;
+}
+.home-blog-item__info-group img {
+  position: relative;
+  transform: translateY(-2px);
+}
+.home-blog-item__author {
+  margin-left: 8px;
+}
+.home-blog-item__time {
+  margin-left: 4px;
+}
+.home-blog-item__content {
+  padding: 0 15px 35px;
+}
+.home-blog-item__heading {
+  font-weight: bold;
+  margin-bottom: 17px;
+  transition: all 0.2s linear;
+}
+.home-blog-item__desc {
+  margin-bottom: 14px;
+}
+.home-blog-item__cta {
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+.home-blog-item:hover {
+  cursor: pointer;
+}
+.home-blog-item:hover .home-blog-item__heading, .home-blog-item:hover .home-blog-item__cta {
+  color: var(--primary-color);
+}
+
 :root {
   --gutter: 15px;
   --container-width: calc(1180px + calc(4 * var(--gutter)));
@@ -1831,6 +1941,51 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: var(--section-spacing) 0;
+}
+.home-blog {
+  --blog-item-width: 40%;
+}
+.home-blog__heading {
+  margin-bottom: 48px;
+}
+.home-blog__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(2 * var(--gutter));
+}
+@media screen and (max-width: 991.98px) {
+  .home-blog__list {
+    justify-content: flex-start;
+    grid-auto-columns: var(--blog-item-width);
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+  }
+  .home-blog__list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .home-blog__list > * {
+    scroll-snap-align: start;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .home-blog {
+    --blog-item-width: 60%;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .home-blog {
+    --blog-item-width: 90%;
+  }
 }
 
 .product__heading {

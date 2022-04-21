@@ -33,6 +33,11 @@
       @include font(45px, 700, 62px);
     }
   }
+  @include md {
+    &-xl {
+      @include font(32px, 700, 40px);
+    }
+  }
 }
 .text {
   color: $text-color;

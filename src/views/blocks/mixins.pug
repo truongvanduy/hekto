@@ -103,3 +103,14 @@ mixin homeBlogItem(heading, author, date, desc, imgSrc)
       figcaption.home-blog-item__heading.text.text-lg.color-heading.font-primary= heading
       p.home-blog-item__desc.text.text-md.font-secondary= desc
       a(href="#!").home-blog-item__cta.text.text-md.font-secondary.color-heading Read more
+
+mixin mainHeader(title)
+  section.main-header 
+    .container.main-header__container
+      h1.main-header__title.font-primary= title
+      nav.breadcrumb
+        ol.breadcrumb__list 
+          li.breadcrumb__item 
+            a(href="./index.html").breadcrumb__link Home 
+          li.breadcrumb__item.breadcrumb__item--active
+            a(href="#").breadcrumb__link= title

@@ -1,0 +1,35 @@
+.product {
+    border: 1px;
+    background-color: #ebf3f3;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #2d07a8;
+}
+
+.images {
+    height: 120px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: auto auto auto auto;
+    padding: 10px;
+    gap: 1px;
+    margin: 10px;
+
+}
+
+.product_price {
+    color: blue;
+}
+
+.product_price_sale {
+    color: rgb(243, 98, 98);
+}
+
+.product_name {
+    font-size: 20px;
+}

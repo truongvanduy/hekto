@@ -11,6 +11,7 @@
 }
 @media screen and (max-width: 767.98px) {
   :root {
+    --section-spacing: 64px;
     --nav-top-height: 0px;
     --nav-bottom-height: 70px;
   }
@@ -107,6 +108,13 @@ h6 {
     line-height: 62px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .heading-xl {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+}
 
 .text {
   color: var(--text-color);
@@ -166,7 +174,7 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul, ol {
   list-style: none;
 }
 
@@ -795,6 +803,55 @@ body::-webkit-scrollbar-thumb:active {
 }
 .home-blog-item:hover .home-blog-item__heading, .home-blog-item:hover .home-blog-item__cta {
   color: var(--primary-color);
+}
+
+.main-header {
+  background-color: #F6F5FF;
+  height: 286px;
+  color: #101750;
+}
+.main-header__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-header__title {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.breadcrumb {
+  margin-top: 4px;
+  margin-left: -4px;
+}
+.breadcrumb__list {
+  display: flex;
+  gap: 4px;
+}
+.breadcrumb__item--active {
+  color: #FB2E86;
+}
+.breadcrumb__item:not(:first-child) {
+  position: relative;
+}
+.breadcrumb__item:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 100rem;
+  background-color: currentColor;
+}
+.breadcrumb__link {
+  font-family: "Lato", sans-serif, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 6px;
 }
 
 :root {
@@ -2093,4 +2150,35 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.not-found {
+  margin-top: var(--section-spacing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.not-found-main {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  gap: calc(var(--section-spacing) / 1) 0;
+}
+.not-found__img {
+  margin-bottom: 32px;
+}
+.not-found__heading {
+  margin-bottom: 62px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #152970;
+  text-align: center;
+}
+@media screen and (max-width: 767.98px) {
+  .not-found__heading {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
 }

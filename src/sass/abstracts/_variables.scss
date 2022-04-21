@@ -11,6 +11,7 @@
   --nav-top-height: 44px;
   --nav-bottom-height: 80px;
   @include md {
+    --section-spacing: 64px;
     --nav-top-height: 0px;
     --nav-bottom-height: 70px;
   }

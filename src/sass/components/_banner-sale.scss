@@ -1,10 +1,10 @@
 .banner-sale {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.05)), url('../images/home/sofa-sale-off.jpg');
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../images/home/hahaha.jpg');
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 100vh;
+  padding-top: min(100vh, min(66.67%, 70vh));
   overflow: hidden;
   &__container {
     padding-left: calc(2 * var(--gutter));
@@ -20,10 +20,9 @@
   }
   &__content {
     text-align: center;
-    width: 100%;
-    max-width: 800px;
-    background-color: rgba($color: #fff, $alpha: 0.75);
-    padding: 40px 20px;
+    width: min(80rem, 100%);
+    background-color: rgba($color: #fff, $alpha: 0.85);
+    padding: clamp(2rem, 4vw, 8rem) 2rem;
     display: flex;
     align-items: center;
     justify-content: center;

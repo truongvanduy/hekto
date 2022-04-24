@@ -1,8 +1,8 @@
 ul.menu.js-menu 
-  li.menu__item.mobile
+  li.menu__item.tablet
     .search 
       input(type="text").search__input
-      button.btn.btn--primary.btn--sm.search__btn
+      button.btn.btn--primary.btn--solid.btn--sm.search__btn
         img(src="../images/base/search.svg", alt="search")
   li.menu__item 
     a.menu__link.text-lg.color-heading(href="./index.html") Home
@@ -18,5 +18,3 @@ ul.menu.js-menu
     +navActionGroup("Cart", "../images/base/cart.svg", "cart", "menu__nav-top-item mobile-reverse")
     +navContactGroup("mailto: mhhasanul@gmail.com", "../images/base/mail.svg", "email", "mhhasanul@gmail.com", "menu__nav-top-item")
     +navContactGroup("tel: (12345)67890", "../images/base/phone.svg", "telephone", "(12345)67890", "menu__nav-top-item")
-    +navActionGroup("Language", "../images/base/chevron-down.svg", "chevron down", "menu__nav-top-item")
-    +navActionGroup("USD", "../images/base/chevron-down.svg", "chevron down", "menu__nav-top-item")

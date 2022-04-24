@@ -1,8 +1,8 @@
+@import "./abstracts/reset";
 @import "./abstracts/breakpoints";
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
-@import "./base/reset";
 @import "./base/typography";
 @import "./base/base";
 
@@ -20,6 +20,7 @@
 @import "./components/banner-sale";
 @import "./components/home-blog";
 @import "./components/main-header";
+@import "./components/banner-2";
 
 @import "./layout/grid";
 @import "./layout/layout";

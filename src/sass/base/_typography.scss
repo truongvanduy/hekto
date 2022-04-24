@@ -8,50 +8,40 @@
   color: $heading-color;
   font-family: $primary-font;
   &-2xl {
-    @include font(53px, 700, 82px);
+    @include font(clamp(3.5rem, 4vw, 5.3rem), 700, 1.5);
   }
   &-xl {
-    @include font(42px, 700, 50px);
+    @include font(clamp(3.2rem, 4vw, 4.2rem), 700, 1.25);
   }
   &-lg {
-    @include font(35px, 700, 46px);
+    @include font(3.5rem, 700, 4.6rem);
   }
   &-md {
-    @include font(26px, 600, 30px);
+    @include font(2.6rem, 600, 3rem);
   }
   &-sm {
-    @include font(22px, 500, 26px);
+    @include font(2.2rem, 500, 2.6rem);
   }
   &-xs {
-    @include font(20px, 400, 23px);
+    @include font(2rem, 400, 2.3rem);
   }
   &-center {
     text-align: center;
-  }
-  @include xl {
-    &-2xl {
-      @include font(45px, 700, 62px);
-    }
-  }
-  @include md {
-    &-xl {
-      @include font(32px, 700, 40px);
-    }
   }
 }
 .text {
   color: $text-color;
   &-lg {
-    @include font(18px, 400, 22px);
+    @include font(1.8rem, 400, 2.2rem);
   }
   &-md {
-    @include font(16px, 400, 30px);
+    @include font(1.6rem, 400, 3rem);
   }
   &-sm {
-    @include font(14px, 400, 16.41px);
+    @include font(1.4rem, 400, 1.641rem);
   }
   &-xs {
-    @include font(12px, 400, 14px);
+    @include font(1.2rem, 400, 1.4rem);
   }
   &-center {
     text-align: center;
@@ -76,5 +66,8 @@
   }
   &-text {
     color: $text-color;
+  }
+  &-white {
+    color: white;
   }
 }

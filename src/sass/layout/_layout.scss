@@ -22,8 +22,13 @@ main {
     display: none;
   }
 }
-@include underBreakpoint(map-get($breakpoints, "md")) {
-  .above-mobile {
+@include aboveBreakpoint(map-get($breakpoints, "lg")) {
+  .tablet {
+    display: none;
+  }
+}
+@include underBreakpoint(map-get($breakpoints, "lg")) {
+  .above-tablet {
     display: none;
   }
 }

@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: min(100vh, min(66.67%, 70vh));
+  padding-top: min(100vh, max(66.67%, 70vh));
   overflow: hidden;
   &__container {
     padding-left: calc(2 * var(--gutter));

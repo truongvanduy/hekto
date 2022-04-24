@@ -59,7 +59,7 @@ h6 {
 }
 @media screen and (max-width: 991.98px) {
   :root {
-    --nav-top-height: 0;
+    --nav-top-height: 0rem;
     --nav-bottom-height: 7rem;
   }
 }
@@ -712,7 +712,7 @@ body::-webkit-scrollbar-thumb:active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: min(100vh, min(66.67%, 70vh));
+  padding-top: min(100vh, max(66.67%, 70vh));
   overflow: hidden;
 }
 .banner-sale__container {

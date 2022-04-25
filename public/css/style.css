@@ -956,6 +956,8 @@ body::-webkit-scrollbar-thumb:active {
 }
 .on-trending-item__img {
   align-self: center;
+  width: 80%;
+  height: 80%;
 }
 .on-trending-item__img img {
   width: 100%;

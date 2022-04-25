@@ -13,7 +13,7 @@
   --nav-bottom-height: 8rem;
   @include lg {
     --nav-top-height: 0rem;
-    --nav-bottom-height: 7rem;
+    --nav-bottom-height: 5rem;
   }
   --header-height: calc(var(--nav-bottom-height) + var(--nav-top-height));
 }

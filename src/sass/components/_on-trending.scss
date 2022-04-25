@@ -7,20 +7,18 @@
     flex-direction: column;
     height: 100%;
     padding: 1.6rem;
+    &--md &__img {
+      width: min(90%, 18rem);
+    }
     @include aboveBreakpoint(map-get($breakpoints, "md")) {
-      &--md &__img {
-        width: min(80%, 20rem);
-        height: min(80%, 20rem);
-      }
       &--lg &__img {
-        width: min(80%, 30rem);
-        height: min(80%, 30rem);
+        min-height: 28rem;
       }
     }
     &__img {
       align-self: center;
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: 90%;
       & img {
         width: 100%;
         height: 100%;
@@ -30,12 +28,15 @@
     &__name {
       align-self: flex-start;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 500;
+      font-family: "Poppins", sans-serif;
+      color: #336;
+      font-size: 1.8rem;
     }
     &__price {
       align-self: flex-end;
       font-style: italic;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
   }
 }

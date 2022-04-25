@@ -16,7 +16,6 @@ const header = $('.header');
 let currentPosition = 0;
 
 window.onscroll = e => {
-  console.log(e.deltaY);
   let newPosition = document.documentElement.scrollTop;
   if (newPosition > currentPosition && newPosition > header.offsetHeight && !menu.classList.contains('opened')) {
     header.classList.add('hide');

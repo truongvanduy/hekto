@@ -117,11 +117,11 @@ mixin mainHeader(title)
 
 mixin onTrendingItem(type, name, price, imgSrc)
   figure(class="product-item on-trending-item on-trending-item--" + type)
-      figcaption.on-trending-item__name.font-secondary= name
-      .on-trending-item__img.product-item__img 
-        img(src= imgSrc, alt="a chair")
-      span.on-trending-item__price= price
-      +productActionSet("product-action--bottom-left")
-          +productActionItem("","fa-solid fa-cart-plus")
-          +productActionItem("","fa-regular fa-heart")
-          +productActionItem("","fa-solid fa-magnifying-glass")
+      //- figcaption.on-trending-item__name.font-secondary= name
+      //- .on-trending-item__img.product-item__img 
+      //-   img(src= imgSrc, alt="a chair")
+      //- span.on-trending-item__price= price
+      //- +productActionSet("product-action--bottom-left")
+      //-     +productActionItem("","fa-solid fa-cart-plus")
+      //-     +productActionItem("","fa-regular fa-heart")
+      //-     +productActionItem("","fa-solid fa-magnifying-glass")

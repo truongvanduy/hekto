@@ -74,7 +74,7 @@ h6 {
   line-height: 1.5;
 }
 .heading-xl {
-  font-size: clamp(2.8rem, 1.6vw + 1.6rem, 4rem);
+  font-size: clamp(2.8rem, 1.6vw + 1.6rem, 3.8rem);
   font-weight: 600;
   line-height: 1.25;
 }
@@ -412,7 +412,7 @@ body::-webkit-scrollbar-thumb:active {
   transform: translateY(-150%);
 }
 .product-item:hover .product-action--bottom-left .product-action__item {
-  transform: translateY(-120%);
+  transform: translateY(-130%);
 }
 .product-item:hover .product-action--rounded .product-action__item {
   transform: translateY(-170%);
@@ -971,6 +971,7 @@ body::-webkit-scrollbar-thumb:active {
   align-self: center;
   width: 100%;
   height: 90%;
+  min-height: 18rem;
 }
 .on-trending-item__img img {
   width: 100%;

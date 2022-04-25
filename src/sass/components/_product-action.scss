@@ -49,9 +49,13 @@
       transition: all 0.25s linear;
       opacity: 0.1;
     }
-    &:hover::before {
-      background-color: currentColor;
-      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+    &:hover {
+      // color: $primary-color;
+      &::before {
+        background-color: currentColor;
+        box-shadow:
+          0px 0px 4px rgba(0, 0, 0, 0.05);
+      }
     }
     &:nth-child(1) {
       transition-delay: 0s;
@@ -84,7 +88,7 @@
     transform: translateY(-150%);
   }
   .product-item:hover &--bottom-left &__item {
-    transform: translateY(-120%);
+    transform: translateY(-130%);
   }
   .product-item:hover &--rounded &__item {
     transform: translateY(-170%);

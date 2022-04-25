@@ -48,11 +48,14 @@ const products = [
     quantity: 0,
   },
 ]
+
+// Get trending products from product list
 const onTrendingProducts = products.filter((product, index) => {
   if (product.category === "trending")
     return product;
 })
-console.log(onTrendingProducts);
+
+// Render trending product list to HTML
 const onTrendingElements = document.querySelectorAll('.on-trending-item');
 
 onTrendingElements.forEach((element, i) => {

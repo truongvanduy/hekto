@@ -944,16 +944,18 @@ body::-webkit-scrollbar-thumb:active {
   height: 100%;
   padding: 1.6rem;
 }
-.on-trending-item--md {
-  min-height: 30rem;
-}
-.on-trending-item--lg {
-  min-height: 40rem;
+@media screen and (min-width: 767.98px) {
+  .on-trending-item--md .on-trending-item__img {
+    width: min(80%, 20rem);
+    height: min(80%, 20rem);
+  }
+  .on-trending-item--lg .on-trending-item__img {
+    width: min(80%, 30rem);
+    height: min(80%, 30rem);
+  }
 }
 .on-trending-item__img {
   align-self: center;
-  width: 80%;
-  height: 80%;
 }
 .on-trending-item__img img {
   width: 100%;

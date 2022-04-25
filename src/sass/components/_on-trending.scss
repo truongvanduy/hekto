@@ -7,16 +7,18 @@
     flex-direction: column;
     height: 100%;
     padding: 1.6rem;
-    &--md {
-      min-height: 30rem;
-    }
-    &--lg {
-      min-height: 40rem;
+    @include aboveBreakpoint(map-get($breakpoints, "md")) {
+      &--md &__img {
+        width: min(80%, 20rem);
+        height: min(80%, 20rem);
+      }
+      &--lg &__img {
+        width: min(80%, 30rem);
+        height: min(80%, 30rem);
+      }
     }
     &__img {
       align-self: center;
-      width: 80%;
-      height: 80%;
       & img {
         width: 100%;
         height: 100%;

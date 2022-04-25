@@ -114,3 +114,10 @@ mixin mainHeader(title)
             a(href="./index.html").breadcrumb__link Home 
           li.breadcrumb__item.breadcrumb__item--active
             a(href="#").breadcrumb__link= title
+
+mixin onTrendingItem(type)
+  figure(class="product-item on-trending-item on-trending-item--" + type)
+      figcaption.on-trending-item__name.heading.heading-xs.font-secondary A Chair 
+      .on-trending-item__img.product-item__img 
+        img(src="../images/home/a-chair.png", alt="a chair")
+      span.on-trending-item__price 1000$

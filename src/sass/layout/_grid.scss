@@ -1,7 +1,7 @@
 :root {
-  --gutter: 1.5rem;
+  --gutter: 1.2rem;
   @include md {
-    --gutter: 1rem;
+    --gutter: 0.8rem;
   }
 }
 .grid {

@@ -38,8 +38,9 @@
     }
   }
   &__desc {
-    font-size: clamp(1.8rem, 0.8vw + 0.9rem, 2.2rem);
+    font-size: clamp(1.8rem, 0.8vw + 0.7rem, 2rem);
     max-width: 45ch;
+    letter-spacing: 0.02em;
   }
   &__cta {
     text-transform: uppercase;

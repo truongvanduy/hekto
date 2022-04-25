@@ -1,0 +1,37 @@
+.on-trending {
+  &-item {
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.6rem;
+    &--md {
+      min-height: 30rem;
+    }
+    &--lg {
+      min-height: 40rem;
+    }
+    &__img {
+      align-self: center;
+      width: 80%;
+      height: 80%;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__name {
+      align-self: flex-start;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &__price {
+      align-self: flex-end;
+      font-style: italic;
+      font-size: 1.8rem;
+    }
+  }
+}

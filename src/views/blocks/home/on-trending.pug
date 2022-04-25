@@ -1,0 +1,28 @@
+section.on-trending
+  .on-trending__title.heading.heading-xl.heading-center.product__heading On Trending 
+  .on-trending__container 
+    .on-trending__group 
+      .on-trending
+  .grid.wide 
+    .row 
+      .col.col-6.xl-6.lg-12.md-12.sm-12 
+        .row 
+          .col.col-12.xl-12.lg-7.md-12.sm-12 
+            +onTrendingItem("lg")
+          .col.col-12.xl-12.lg-5.md-12.sm-12  
+            .row
+              .col.col-6.xl-6.lg-12.md-6.sm-12
+                +onTrendingItem("md")
+              .col.col-6.xl-6.lg-12.md-6.sm-12
+                +onTrendingItem("md")
+      .col.col-6.xl-6.lg-12.md-12.sm-12 
+        .row 
+          .col.col-12.xl-12.lg-5.md-12.sm-12  
+            .row
+              .col.col-6.xl-6.lg-12.md-6.sm-12
+                +onTrendingItem("md")
+              .col.col-6.xl-6.lg-12.md-6.sm-12
+                +onTrendingItem("md")
+          .col.col-12.xl-12.lg-7.md-12.sm-12  
+            +onTrendingItem("lg")
+

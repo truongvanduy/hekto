@@ -1,6 +1,7 @@
 .banner-2 {
   display: flex;
   gap: 0 30px;
+  position: relative;
   &__img {
     flex: 5;
     & img {
@@ -19,7 +20,7 @@
   }
   &__title {
     text-transform: capitalize;
-    font-size: clamp(3.5rem, 5vw, 5.5rem);
+    font-size: clamp(3rem, 2vw + 2rem, 5rem);
     font-weight: 600;
     letter-spacing: 0;
     line-height: 1.4;
@@ -38,7 +39,7 @@
     }
   }
   &__desc {
-    font-size: clamp(1.8rem, 0.8vw + 0.7rem, 2rem);
+    font-size: clamp(1.6rem, 0.8vw + 0.7rem, 2rem);
     max-width: 45ch;
     letter-spacing: 0.02em;
   }

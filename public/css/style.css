@@ -74,8 +74,8 @@ h6 {
   line-height: 1.5;
 }
 .heading-xl {
-  font-size: clamp(3.2rem, 4vw, 4.2rem);
-  font-weight: 700;
+  font-size: clamp(2.8rem, 1.6vw + 1.6rem, 4rem);
+  font-weight: 600;
   line-height: 1.25;
 }
 .heading-lg {
@@ -344,6 +344,15 @@ body::-webkit-scrollbar-thumb:active {
   transform: translate(-50%, 100%);
   bottom: 0;
 }
+.product-action--bottom-left {
+  left: 0;
+  bottom: 0;
+  transform: translate(20%, 100%);
+}
+.product-action--bottom-left .product-action__item {
+  color: var(--text-color);
+  filter: brightness(0.8);
+}
 .product-action__item {
   width: 40px;
   height: 40px;
@@ -402,6 +411,9 @@ body::-webkit-scrollbar-thumb:active {
 .product-item:hover .product-action--horizontal .product-action__item {
   transform: translateY(-150%);
 }
+.product-item:hover .product-action--bottom-left .product-action__item {
+  transform: translateY(-120%);
+}
 .product-item:hover .product-action--rounded .product-action__item {
   transform: translateY(-170%);
 }
@@ -423,6 +435,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 .product-top-item__top {
   background-color: var(--product-bgc);
+  background-color: #f8f8f8;
   width: 270px;
   height: 270px;
   border-radius: 100rem;
@@ -432,6 +445,7 @@ body::-webkit-scrollbar-thumb:active {
   flex-shrink: 0;
 }
 .product-top-item:hover .product-top-item__top {
+  border-color: #f8f8f8;
   box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05), -4px 4px 0 0 #9877e7;
 }
 .product-top-item__img {
@@ -867,6 +881,7 @@ body::-webkit-scrollbar-thumb:active {
 .banner-2 {
   display: flex;
   gap: 0 30px;
+  position: relative;
 }
 .banner-2__img {
   flex: 5;
@@ -886,7 +901,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 .banner-2__title {
   text-transform: capitalize;
-  font-size: clamp(3.5rem, 5vw, 5.5rem);
+  font-size: clamp(3rem, 2vw + 2rem, 5rem);
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.4;
@@ -905,7 +920,7 @@ body::-webkit-scrollbar-thumb:active {
   background-color: #222;
 }
 .banner-2__desc {
-  font-size: clamp(1.8rem, 0.8vw + 0.7rem, 2rem);
+  font-size: clamp(1.6rem, 0.8vw + 0.7rem, 2rem);
   max-width: 45ch;
   letter-spacing: 0.02em;
 }
@@ -968,12 +983,12 @@ body::-webkit-scrollbar-thumb:active {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   color: #336;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 1.5vw + 1rem, 1.8rem);
 }
 .on-trending-item__price {
   align-self: flex-end;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 :root {
@@ -2195,6 +2210,7 @@ main {
 }
 
 .product__heading {
+  text-transform: uppercase;
   margin-bottom: clamp(2.4rem, 5vw, 4.8rem);
 }
 .product-featured-item:hover {

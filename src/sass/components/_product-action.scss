@@ -14,6 +14,15 @@
     transform: translate(-50%, 100%);
     bottom: 0;
   }
+  &--bottom-left {
+    left: 0;
+    bottom: 0;
+    transform: translate(20%, 100%);
+  }
+  &--bottom-left &__item {
+    color: $text-color;
+    filter: brightness(0.8);
+  }
   &__item {
     width: 40px;
     height: 40px;
@@ -73,6 +82,9 @@
   }
   .product-item:hover &--horizontal &__item {
     transform: translateY(-150%);
+  }
+  .product-item:hover &--bottom-left &__item {
+    transform: translateY(-120%);
   }
   .product-item:hover &--rounded &__item {
     transform: translateY(-170%);

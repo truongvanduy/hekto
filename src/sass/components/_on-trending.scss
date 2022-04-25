@@ -31,12 +31,12 @@
       font-weight: 500;
       font-family: "Poppins", sans-serif;
       color: #336;
-      font-size: 1.8rem;
+      font-size: clamp(1.4rem, 1.5vw + 1rem, 1.8rem);
     }
     &__price {
       align-self: flex-end;
       font-style: italic;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
   }
 }

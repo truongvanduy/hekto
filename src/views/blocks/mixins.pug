@@ -125,3 +125,14 @@ mixin onTrendingItem(type, name, price, imgSrc)
       //-     +productActionItem("","fa-solid fa-cart-plus")
       //-     +productActionItem("","fa-regular fa-heart")
       //-     +productActionItem("","fa-solid fa-magnifying-glass")
+
+mixin bannerStick(title, caption, desc, imgSrc, btnText= "view all products", alt= "Furniture")
+  section.banner-stick.container
+    .banner-stick__content.font-primary 
+      h3.banner-stick__title= title 
+      p.banner-stick__caption= caption 
+      p.banner-stick__desc.font-secondary= desc
+      button.banner-stick__cta.btn.btn--sm.btn--solid.btn--primary= btnText
+    .banner-stick__img 
+      img(src= imgSrc, alt= alt)
+

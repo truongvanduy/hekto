@@ -74,7 +74,7 @@ h6 {
   line-height: 1.5;
 }
 .heading-xl {
-  font-size: clamp(2.8rem, 1.6vw + 1.6rem, 3.8rem);
+  font-size: clamp(2.5rem, 1.4vw + 1.2rem, 3rem);
   font-weight: 600;
   line-height: 1.25;
 }
@@ -901,7 +901,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 .banner-2__title {
   text-transform: capitalize;
-  font-size: clamp(3rem, 2vw + 2rem, 5rem);
+  font-size: clamp(2.5rem, 1.5vw + 1.6rem, 3.5rem);
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.4;
@@ -947,6 +947,88 @@ body::-webkit-scrollbar-thumb:active {
   .banner-2__cta {
     align-self: unset;
     margin-top: 3.2rem;
+  }
+}
+
+.banner-stick {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  color: var(--heading-color);
+}
+.banner-stick__content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--gutter);
+  background-color: #fff;
+  height: fit-content;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5.6rem 2.4rem 3.6rem;
+  text-align: center;
+}
+.banner-stick__title {
+  font-size: clamp(2rem, 1.4rem + 1vw, 2.5rem);
+  font-weight: 400;
+  position: relative;
+}
+.banner-stick__title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1.6rem;
+  height: 0.2rem;
+  width: 4rem;
+  background-color: currentColor;
+}
+.banner-stick__caption {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.banner-stick__desc {
+  width: 34ch;
+  color: #4b4b4b;
+  font-style: italic;
+  margin-bottom: 2.8rem;
+}
+.banner-stick__cta {
+  padding-inline: 2rem;
+  text-transform: capitalize;
+}
+.banner-stick__img {
+  width: 80%;
+}
+@media screen and (max-width: 991.98px) {
+  .banner-stick {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .banner-stick__content {
+    position: relative;
+    transform: translateY(-50%);
+    left: 0;
+    order: 1;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -10rem;
+  }
+  .banner-stick__desc {
+    width: 100%;
+  }
+  .banner-stick__img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .banner-stick__desc {
+    display: none;
   }
 }
 

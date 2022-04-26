@@ -17,9 +17,6 @@
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.4) 100%);
-    @include md {
-      left: 30%;
-    }
     @include sm {
       top: 50%;
       left: 50%;
@@ -34,13 +31,21 @@
     width: min(80rem, 100%);
     background-color: rgba($color: #fff, $alpha: 0.85);
     background-color: transparent;
-    padding: clamp(2rem, 4vw, 8rem) 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
     margin-left: auto;
+    margin-right: auto;
+    @include aboveBreakpoint(map-get($breakpoints, "sm")) {
+      text-align: left;
+      align-items: flex-start;
+      margin-left: clamp(2rem, 3.8vw, 7.2rem);
+    }
+    @include sm {
+      padding: clamp(2rem, 4vw, 8rem) 2rem;
+    }
   }
   &__heading {
     margin-bottom: 1.2rem;
@@ -59,7 +64,10 @@
     text-transform: uppercase;
     font-size: clamp(1.6rem, 0.8vw + 0.8rem, 2.2rem);
     &:hover {
-      border-color: $primary-color;
+      border-color: white;
+      background-color: white;
+      color: $primary-color;
+      color: #222;
     }
   }
 }

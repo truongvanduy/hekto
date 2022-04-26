@@ -69,7 +69,7 @@ h6 {
   font-family: "Josefin Sans", sans-serif;
 }
 .heading-2xl {
-  font-size: clamp(3rem, 4vw, 6.5rem);
+  font-size: clamp(2.5rem, 4vw, 6.5rem);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -732,8 +732,6 @@ body::-webkit-scrollbar-thumb:active {
   overflow: hidden;
 }
 .banner-sale__container {
-  padding-left: calc(2 * var(--gutter));
-  padding-right: calc(2 * var(--gutter));
   position: absolute;
   top: 0;
   right: 0;
@@ -751,7 +749,12 @@ body::-webkit-scrollbar-thumb:active {
 }
 @media screen and (max-width: 575.98px) {
   .banner-sale__container {
-    left: 0;
+    top: 50%;
+    left: 50%;
+    bottom: unset;
+    transform: translate(-50%, -80%);
+    width: fit-content;
+    height: fit-content;
   }
 }
 .banner-sale__content {
@@ -774,7 +777,7 @@ body::-webkit-scrollbar-thumb:active {
   font-weight: 400;
 }
 .banner-sale__desc {
-  margin-bottom: 6rem;
+  margin-bottom: clamp(2rem, 2.3rem + 2.3vw, 6rem);
   font-style: italic;
   color: white;
   font-size: clamp(1.6rem, 0.8vw + 0.8rem, 2.2rem);

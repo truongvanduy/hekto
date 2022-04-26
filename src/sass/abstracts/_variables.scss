@@ -9,8 +9,8 @@
   // Spacing
   --container-width: calc(118rem + calc(4 * var(--gutter)));
   --section-spacing: clamp(6.4rem, 10vw, 12.8rem);
-  --nav-top-height: 4.4rem;
-  --nav-bottom-height: 8rem;
+  --nav-top-height: 4rem;
+  --nav-bottom-height: 7rem;
   @include lg {
     --nav-top-height: 0rem;
     --nav-bottom-height: 5rem;

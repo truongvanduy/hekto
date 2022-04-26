@@ -8,7 +8,7 @@
   color: $heading-color;
   font-family: $primary-font;
   &-2xl {
-    @include font(clamp(3.5rem, 4vw, 5.3rem), 700, 1.5);
+    @include font(clamp(3rem, 4vw, 6.5rem), 700, 1.2);
   }
   &-xl {
     @include font(clamp(2.5rem, 1.4vw + 1.2rem, 3rem), 600, 1.25);
@@ -32,7 +32,7 @@
 .text {
   color: $text-color;
   &-lg {
-    @include font(1.8rem, 400, 2.2rem);
+    @include font(clamp(1.6rem, 0.7vw + 0.8rem, 1.8rem), 400, 2.2rem);
   }
   &-md {
     @include font(1.6rem, 400, 3rem);

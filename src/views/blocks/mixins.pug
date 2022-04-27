@@ -76,7 +76,7 @@ mixin trendingProductItem(heading, newPrice, oldPrice, imgSrc)
 
 mixin topProductItem(heading, price, imgSrc)
   .col.col-3.xl-6.lg-6.md-6.sm-12 
-    figure.product-top-item.product-item.action-rounded  
+    figure.product-top-item.product-item.action-rounded.obs-transition.fade.side-half-up 
       .product-top-item__top.product-item__top 
         .product-top-item__img.product-item__img 
           img(srcSet= imgSrc , alt= heading)
@@ -128,11 +128,11 @@ mixin onTrendingItem(type, name, price, imgSrc)
 
 mixin bannerStick(title, caption, desc, imgSrc, btnText= "view all products", alt= "Furniture")
   section.banner-stick.container
-    .banner-stick__content.font-primary 
+    .banner-stick__content.font-primary.obs-transition.fade
       h3.banner-stick__title= title 
       p.banner-stick__caption= caption 
       p.banner-stick__desc.font-secondary= desc
       button.banner-stick__cta.btn.btn--md.btn--solid.btn--primary= btnText
-    .banner-stick__img 
+    .banner-stick__img.obs-transition.slide-left.fade
       img(src= imgSrc, alt= alt)
 

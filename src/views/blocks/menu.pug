@@ -1,3 +1,8 @@
+-homePageLink = './index.html'
+-POPLink = "./product.html"
+-cartPageLink = './cart.html'
+-notFoundLink = './404-not-found.html';
+
 ul.menu.js-menu 
   li.menu__item.tablet
     .search 
@@ -5,13 +10,13 @@ ul.menu.js-menu
       button.btn.btn--primary.btn--solid.btn--sm.search__btn
         img(src="../images/base/search.svg", alt="search")
   li.menu__item 
-    a.menu__link.text-lg.color-heading(href="./index.html") Home
+    a.menu__link.text-lg.color-heading(href= homePageLink) Home
   li.menu__item 
-    a.menu__link.text-lg.color-heading(href="./product.html") Products
+    a.menu__link.text-lg.color-heading(href= POPLink) Products
   li.menu__item 
-    a.menu__link.text-lg.color-heading(href="./blog.html") Blog
+    a.menu__link.text-lg.color-heading(href= notFoundLink) Blog
   li.menu__item 
-    a.menu__link.text-lg.color-heading(href="./contact.html") Contact
+    a.menu__link.text-lg.color-heading(href= notFoundLink) Contact
   li.menu__item.mobile.menu__nav-top 
     +navActionGroup("Login", "../images/base/user.svg", "user", "menu__nav-top-item mobile-reverse")
     +navActionGroup("Wishlist", "../images/base/heart.svg", "heart", "menu__nav-top-item mobile-reverse")

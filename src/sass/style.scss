@@ -5,6 +5,7 @@
 
 @import "./base/typography";
 @import "./base/base";
+@import "./base/position";
 
 @import "./components/scrollbar";
 @import "./components/input";
@@ -20,7 +21,7 @@
 @import "./components/banner-sale";
 @import "./components/home-blog";
 @import "./components/main-header";
-@import "./components/banner-2";
+@import "./components/banner-side";
 @import "./components/banner-stick";
 @import "./components/on-trending";
 
@@ -32,3 +33,5 @@
 
 @import "./pages/home";
 @import "./pages/404-not-found";
+
+@import "./base/observer";

@@ -371,7 +371,6 @@ body::-webkit-scrollbar-thumb:active {
 }
 .product-action--bottom-left .product-action__item {
   color: var(--text-color);
-  filter: brightness(0.8);
 }
 .product-action__item {
   width: 40px;
@@ -385,6 +384,7 @@ body::-webkit-scrollbar-thumb:active {
   transform: translate(0);
   font-size: 18px;
   color: #1389FF;
+  color: var(--text-color);
   cursor: pointer;
   position: relative;
 }
@@ -2433,63 +2433,6 @@ main {
 }
 .product-latest-item-price__old {
   color: #FB2448;
-}
-.product-trending__heading {
-  margin-bottom: 4rem;
-}
-.product-trending-item {
-  padding: 1.2rem;
-  border: 0.2rem solid #eee;
-  transition: all 0.2s linear;
-  gap: 1.5rem;
-}
-.product-trending-item:hover {
-  border-color: transparent;
-  box-shadow: 0rem 0.8rem 4rem rgba(49, 32, 138, 0.05);
-}
-.product-trending-item__top {
-  background-color: #f5f6f8;
-  height: 26rem;
-}
-.product-trending-item__heading {
-  font-weight: bold;
-  margin-bottom: 0.8rem;
-}
-.product-trending-item-price {
-  margin-bottom: 2rem;
-}
-.product-trending-item-price__old {
-  opacity: 0.3;
-}
-.product-trending-collection-item {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding-top: 3.4rem;
-  padding-left: 2.5rem;
-}
-.product-trending-collection-item--pink {
-  background-color: #FFF6FB;
-}
-.product-trending-collection-item--purple {
-  background-color: #EEEFFB;
-}
-.product-trending-collection-item__heading {
-  margin-bottom: 1.2rem;
-}
-.product-trending-collection-item__link {
-  text-decoration: underline;
-}
-.product-trending-collection-item__img {
-  align-self: flex-end;
-  margin-top: auto;
-  position: relative;
-  transform: translateY(-3rem);
-}
-.product-trending-collection-item__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .not-found {

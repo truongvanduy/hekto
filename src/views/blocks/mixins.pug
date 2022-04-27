@@ -58,21 +58,21 @@ mixin offerItem(heading, desc, imgSrc)
         figcaption.offer-item__heading.heading.heading-sm.heading-center.color-heading.font-primary= heading
         p.offer-item__desc.text.text-md.text-center.font-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
 
-mixin trendingProductItem(heading, newPrice, oldPrice, imgSrc)
-  .col.col-3.xl-3.lg-6.md-6.sm-12 
-    figure.accessories-item.product-item.action-horizontal  
-      .accessories-item__top.product-item__top 
-        .accessories-item__img.product-item__img 
-          img(srcSet= imgSrc , alt= heading)
-        +productActionSet("product-action--horizontal")
-          +productActionItem("","fa-solid fa-cart-plus")
-          +productActionItem("","fa-regular fa-heart")
-          +productActionItem("","fa-solid fa-magnifying-glass")
-      .accessories-item__bottom.product-item__bottom 
-        figcaption.accessories-item__heading.text.text-lg.text-center.color-heading.font-secondary= heading
-        .accessories-item-price.text.text-sm.text-center.color-heading 
-          span.accessories-item-price__new= newPrice
-          del.accessories-item-price__old= oldPrice
+mixin accessoriesItem(heading, newPrice, oldPrice, imgSrc)
+  //- .col.col-3.xl-3.lg-6.md-6.sm-12 
+  //-   figure.accessories-item.product-item.action-horizontal  
+  //-     .accessories-item__top.product-item__top 
+  //-       .accessories-item__img.product-item__img 
+  //-         img(srcSet= imgSrc , alt= heading)
+  //-       +productActionSet("product-action--horizontal")
+  //-         +productActionItem("","fa-solid fa-cart-plus")
+  //-         +productActionItem("","fa-regular fa-heart")
+  //-         +productActionItem("","fa-solid fa-magnifying-glass")
+  //-     .accessories-item__bottom.product-item__bottom 
+  //-       figcaption.accessories-item__heading.text.text-lg.text-center.color-heading.font-secondary= heading
+  //-       .accessories-item-price.text.text-sm.text-center.color-heading 
+  //-         span.accessories-item-price__new= newPrice
+  //-         del.accessories-item-price__old= oldPrice
 
 mixin topProductItem(heading, price, imgSrc)
   .col.col-3.xl-6.lg-6.md-6.sm-12 

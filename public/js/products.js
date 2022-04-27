@@ -79,6 +79,54 @@ const products = [
     price: 799,
     quantity: 0,
   },
+  {
+    id: 11,
+    name: "Hemi Floor Lamp",
+    imgSrc: "../images/products/hemi-floor-lamp.png",
+    category: "accessories",
+    price: 399,
+    quantity: 0,
+  },
+  {
+    id: 12,
+    name: "Bowie Scatter Scatter Cushion",
+    imgSrc: "../images/products/bowie-scatter-cushion.png",
+    category: "accessories",
+    price: 35,
+    quantity: 0,
+  },
+  {
+    id: 13,
+    name: "Bangles Mirror",
+    imgSrc: "../images/products/bangles-mirror.png",
+    category: "accessories",
+    price: 249,
+    quantity: 0,
+  },
+  {
+    id: 14,
+    name: "Dover Rugs Rug",
+    imgSrc: "../images/products/dover-rugs-rug.png",
+    category: "accessories",
+    price: 299,
+    quantity: 0,
+  },
+  {
+    id: 15,
+    name: "Marcia Coffee Table",
+    imgSrc: "../images/products/marcia-coffee-table.png",
+    category: "accessories",
+    price: 849,
+    quantity: 0,
+  },
+  {
+    id: 16,
+    name: "Captiva Table Lamp",
+    imgSrc: "../images/products/captiva-table-lamp.png",
+    category: "accessories",
+    price: 149,
+    quantity: 0,
+  },
 ]
 
 // Render trending product list to HTML
@@ -100,10 +148,8 @@ onTrendingElements.forEach((element) => {
 
 // Render top chair list to HTML
 const topChairs = document.querySelectorAll('.product-top .row > .col');
-console.log(topChairs);
 let topChairIndex = 0;
 topChairs.forEach((element) => {
-  console.log(element);
   while (products[topChairIndex].category !== "top chair")
     topChairIndex++;
   element.innerHTML = `
@@ -121,4 +167,31 @@ topChairs.forEach((element) => {
       </div>
     </figure>`
   topChairIndex++;
+  console.log(element);
+});
+
+// Render accessories list to HTML
+const accessories = document.querySelector('.accessories .row');
+console.log(accessories);
+
+products.forEach((product) => {
+  if (product.category === 'accessories')
+    accessories.innerHTML +=
+      `<div class="col col-4 xl-4 lg-6 md-6 sm-12"> 
+        <figure class="accessories-item product-item action-horizontal obs-transition fade"> 
+          <div class="accessories-item__top product-item__top"> 
+            <div class="accessories-item__img product-item__img"> <img src="${product.imgSrc}" alt="${product.name}"/></div>
+            <div class="product-action product-action--horizontal">
+              <button class="product-action__item"><i class="fa-solid fa-cart-plus"></i></button>
+              <button class="product-action__item"><i class="fa-regular fa-heart"></i></button>
+              <button class="product-action__item"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+          <div class="accessories-item__bottom product-item__bottom"> 
+            <figcaption class="accessories-item__heading text text-lg text-center color-heading font-secondary">${product.name}</figcaption>
+            <div class="accessories-item-price text text-sm text-center color-heading"> <span class="accessories-item-price__new">$${product.price}</span>
+            </div>
+          </div>
+        </figure>
+      </div>`;
 });

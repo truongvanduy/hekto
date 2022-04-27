@@ -21,7 +21,7 @@
   }
   &--bottom-left &__item {
     color: $text-color;
-    filter: brightness(0.8);
+    // filter: brightness(0.8);
   }
   &__item {
     width: 40px;
@@ -35,6 +35,8 @@
     transform: translate(0);
     font-size: 18px;
     color: #1389FF;
+    color: $text-color;
+    // filter: brightness(0.8);
     cursor: pointer;
     position: relative;
     &::before {

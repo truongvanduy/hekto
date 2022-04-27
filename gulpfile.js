@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug-3');
 const browserSync = require('browser-sync').create();
+const imagemin = require('gulp-imagemin');
 
 // Run sass
 gulp.task('sass', () =>
@@ -22,9 +23,10 @@ gulp.task('pug', () =>
     .pipe(browserSync.stream())
 );
 
-// Copy images
-gulp.task('copy images', () =>
+// Minify images
+gulp.task('minify images', () =>
   gulp.src('./src/images/**/*.*')
+    .pipe(imagemin())
     .pipe(gulp.dest('./public/images/'))
 );
 
@@ -35,17 +37,15 @@ gulp.task('copy js', () =>
 );
 
 // Run tasks
-gulp.task('run', gulp.series('pug', 'sass', 'copy images', 'copy js'));
+gulp.task('run', gulp.series('pug', 'sass', 'minify images', 'copy js'));
 
 // Watch
 gulp.task('watch', () => {
   gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));
   gulp.watch('./src/views/**/*.pug', gulp.series('pug'));
-  gulp.watch('./src/images/**/*.*', gulp.series('copy images'));
+  gulp.watch('./src/images/**/*.*', gulp.series('minify images'));
   gulp.watch('./src/js/**/*.js', gulp.series('copy js'));
 })
 
 // Run all
 gulp.task('default', gulp.series('run', 'watch'));
-
-// Deploy

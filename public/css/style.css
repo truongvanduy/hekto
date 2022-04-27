@@ -459,7 +459,6 @@ body::-webkit-scrollbar-thumb:active {
   width: 270px;
   height: 270px;
   border-radius: 100rem;
-  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
   transition: all 0.2s linear;
   margin-bottom: 27px;
   flex-shrink: 0;
@@ -1135,6 +1134,34 @@ body::-webkit-scrollbar-thumb:active {
   align-self: flex-end;
   font-style: italic;
   font-size: 1.5rem;
+}
+
+.accessories__heading {
+  margin-bottom: 4rem;
+}
+.accessories-item {
+  padding: 1.2rem;
+  border: 0.2rem solid #eee;
+  transition: all 0.2s linear;
+  gap: 1.5rem;
+}
+.accessories-item:hover {
+  border-color: transparent;
+  box-shadow: 0rem 0.8rem 4rem rgba(49, 32, 138, 0.05);
+}
+.accessories-item__top {
+  background-color: #f5f6f8;
+  height: 26rem;
+}
+.accessories-item__heading {
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.accessories-item-price {
+  margin-bottom: 2rem;
+}
+.accessories-item-price__old {
+  opacity: 0.3;
 }
 
 :root {

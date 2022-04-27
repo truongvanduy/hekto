@@ -26,7 +26,7 @@ gulp.task('pug', () =>
 // Minify images
 gulp.task('minify images', () =>
   gulp.src('./src/images/**/*.*')
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest('./public/images/'))
 );
 

@@ -7,7 +7,6 @@ const saleBannerContainerOptions = {
   rootMargin: '-45% 0px 0px 0px',
   threshold: 0,
 };
-console.log(saleBannerContainer);
 const saleBannerContainerObserver = new IntersectionObserver((entries, saleBannerContainerObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting)
@@ -29,7 +28,6 @@ const saleBannerContentOptions = {
   rootMargin: '-30% 0px 0px 0px',
   threshold: 0,
 };
-console.log(saleBannerContents);
 const saleBannerContentObserver = new IntersectionObserver((entries, saleBannerContentsObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting)
@@ -52,7 +50,6 @@ const onTrendingItemOptions = {
   rootMargin: '0px 0px -20% 0px',
   threshold: 0,
 };
-console.log($('.on-trending'));
 const onTrendingItemObserver = new IntersectionObserver((entries, onTrendingItemsObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting)
@@ -73,7 +70,6 @@ const stickBannerOptions = {
   rootMargin: '0px 0px -50% 0px',
   threshold: 0,
 };
-console.log($('.on-trending'));
 const stickBannerObserver = new IntersectionObserver((entries, stickBannersObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting)

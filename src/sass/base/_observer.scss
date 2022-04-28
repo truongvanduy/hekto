@@ -5,7 +5,8 @@
   .obs {
     &-transition {
       transition: opacity $transition-time ease-out, transform $transition-time ease-out;
-      &.btn {
+      &.btn,
+      &.product-item:not(.on-trending-item) {
         transition: all $default-transition-time linear, opacity $transition-time ease-out, transform $transition-time ease-out
       }
     }

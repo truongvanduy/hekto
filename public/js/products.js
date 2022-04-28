@@ -178,7 +178,7 @@ products.forEach((product) => {
   if (product.category === 'accessories')
     accessories.innerHTML +=
       `<div class="col col-4 xl-4 lg-6 md-6 sm-12"> 
-        <figure class="accessories-item product-item action-horizontal obs-transition fade"> 
+        <figure class="accessories-item product-item action-horizontal obs-transition fade slide-down"> 
           <div class="accessories-item__top product-item__top"> 
             <div class="accessories-item__img product-item__img"> <img src="${product.imgSrc}" alt="${product.name}"/></div>
             <div class="product-action product-action--horizontal">

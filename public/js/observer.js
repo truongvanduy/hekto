@@ -45,7 +45,7 @@ saleBannerContents.forEach(content => {
   On Trending Products
 =====================*/
 
-const onTrendingItems = $$('.on-trending-item, .product-top-item, .accessories-item');
+const onTrendingItems = $$('.on-trending-item, .product-top-item, .accessories-item, .home-blog-item');
 const onTrendingItemOptions = {
   rootMargin: '0px 0px -20% 0px',
   threshold: 0,

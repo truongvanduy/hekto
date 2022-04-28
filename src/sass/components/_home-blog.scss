@@ -62,7 +62,7 @@
     cursor: pointer;
   }
   &:hover &__heading,
-  &:hover &__cta {
+  &__cta:hover {
     color: $primary-color;
   }
 }

@@ -187,6 +187,15 @@ ul, ol {
   transform: translate(-50%, -50%);
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -885,7 +894,7 @@ body::-webkit-scrollbar-thumb:active {
 .home-blog-item:hover {
   cursor: pointer;
 }
-.home-blog-item:hover .home-blog-item__heading, .home-blog-item:hover .home-blog-item__cta {
+.home-blog-item:hover .home-blog-item__heading, .home-blog-item__cta:hover {
   color: var(--primary-color);
 }
 
@@ -1210,7 +1219,7 @@ body::-webkit-scrollbar-thumb:active {
 .col-0 {
   display: none;
 }
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.col-1, .col-2, .col-2-4, .col-3, .col-4, .col-4-8, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   display: block;
 }
 .col-1 {
@@ -1236,6 +1245,10 @@ body::-webkit-scrollbar-thumb:active {
 .col-4-5 {
   flex: 0 0 37.5%;
   max-width: 37.5%;
+}
+.col-4-8 {
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 .col-5 {
   flex: 0 0 41.66667%;
@@ -1897,6 +1910,11 @@ body::-webkit-scrollbar-thumb:active {
   overflow-x: hidden;
 }
 
+.section__heading {
+  text-transform: uppercase;
+  margin-bottom: clamp(2.4rem, 5vw, 4.8rem);
+}
+
 main {
   margin-top: var(--header-height);
 }
@@ -2210,9 +2228,11 @@ main {
   padding-bottom: 100px;
 }
 .footer__container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  grid-gap: 60px;
+  --gutter: 3rem;
+  height: fit-content;
+}
+.footer__container .row {
+  margin-block: 0;
 }
 .footer__logo {
   margin-bottom: 30px;
@@ -2288,11 +2308,6 @@ main {
   }
 }
 @media screen and (max-width: 991.98px) {
-  .footer__container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    column-gap: 0;
-  }
   .footer-form {
     grid-column: 2/span 4;
     display: flex;
@@ -2470,7 +2485,7 @@ main {
   .obs-transition {
     transition: opacity 1s ease-out, transform 1s ease-out;
   }
-  .obs-transition.btn {
+  .obs-transition.btn, .obs-transition.product-item:not(.on-trending-item) {
     transition: all 0.25s linear, opacity 1s ease-out, transform 1s ease-out;
   }
   .obs-delay-quarter {

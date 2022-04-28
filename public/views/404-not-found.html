@@ -20,10 +20,7 @@
             <div class="container nav__container"> 
               <div class="nav-contact"> <a class="nav-contact__group" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
               </div>
-              <div class="nav-action"> 
-                <div class="nav-action__group"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></div>
-                <div class="nav-action__group"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></div>
-                <div class="nav-action__group .nav-cart"><span class="nav-action__text"></span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></div>
+              <div class="nav-action"> <a class="nav-action__group" href=""><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></a><a class="nav-action__group" href=""><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></a><a class="nav-action__group" href="./cart.html"><span class="nav-action__text"></span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></a>
               </div>
             </div>
           </div>
@@ -40,10 +37,7 @@
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./product.html">Products</a></li>
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./404-not-found.html">Blog</a></li>
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./404-not-found.html">Contact</a></li>
-                <li class="menu__item mobile menu__nav-top"> 
-                  <div class="nav-action__group menu__nav-top-item mobile-reverse"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></div>
-                  <div class="nav-action__group menu__nav-top-item mobile-reverse"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></div>
-                  <div class="nav-action__group menu__nav-top-item mobile-reverse"><span class="nav-action__text">Cart</span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></div><a class="nav-contact__group menu__nav-top-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group menu__nav-top-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
+                <li class="menu__item mobile menu__nav-top"> <a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></a><a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></a><a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Cart</span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></a><a class="nav-contact__group menu__nav-top-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group menu__nav-top-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
                 </li>
               </ul>
               <div class="overlay tablet"></div><a class="heading heading-lg logo header__logo" href="./index.html">Hekto</a>
@@ -65,53 +59,63 @@
       <main class="not-found-main">
         <section class="not-found"> 
           <div class="not-found__img"> <img srcSet="../images/base/404-not-found.png 2x" alt="404 not found"></div>
-          <h2 class="not-found__heading">Oops! The page you requested was not found! </h2><a class="btn btn--primary btn--md" href="./index.html">Back To Home</a>
+          <h2 class="not-found__heading">Oops! The page you requested was not found! </h2><a class="btn btn--primary btn--md btn--solid" href="./index.html">Back To Home</a>
         </section>
       </main>
       <footer class="footer"> 
         <div class="footer-top"> 
-          <div class="container footer__container grid wide"> 
-            <form class="footer-form footer__group" action="#"> 
-              <div class="logo heading heading-lg footer__logo">Hekto</div>
-              <div class="footer-form__group">
-                <input class="footer-form__input input input--md" type="email" placeholder="Your email" required>
-                <button class="btn btn--sm btn--primary btn--solid footer-form__submit">Sign Up</button>
+          <div class="container footer__container grid wide">
+            <div class="row"> 
+              <div class="col col-4-8 xl-4-8 lg-12 md-12 sm-12">
+                <form class="footer-form footer__group" action="#"> 
+                  <div class="logo heading heading-lg footer__logo">Hekto</div>
+                  <div class="footer-form__group">
+                    <input class="footer-form__input input input--md" type="email" placeholder="Your email" required>
+                    <button class="btn btn--sm btn--primary btn--solid footer-form__submit">Sign Up</button>
+                  </div>
+                  <div class="footer-form__text"> 
+                    <p class="footer__text text text-md">Contact Info</p>
+                    <p class="footer__text text text-md">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                  </div>
+                </form>
               </div>
-              <div class="footer-form__text"> 
-                <p class="footer__text text text-md">Contact Info</p>
-                <p class="footer__text text text-md">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+              <div class="col col-2-4 xl-2-4 lg-4 md-12 sm-12">
+                <div class="footer__group footer__menu"> 
+                  <div class="heading heading-sm footer__heading">Categories</div>
+                  <ul class="footer__list"> 
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Laptops & Computers</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Cameras & Photography</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Smart Phones & Tablets</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Video Games & Consoles</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Waterproof Headphones</a></li>
+                  </ul>
+                </div>
               </div>
-            </form>
-            <div class="footer__group footer__menu"> 
-              <div class="heading heading-sm footer__heading">Categories</div>
-              <ul class="footer__list"> 
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Laptops & Computers</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Cameras & Photography</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Smart Phones & Tablets</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Video Games & Consoles</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Waterproof Headphones</a></li>
-              </ul>
-            </div>
-            <div class="footer__group footer__menu"> 
-              <div class="heading heading-sm footer__heading">Customer Care </div>
-              <ul class="footer__list"> 
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">My Account</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Discount</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Returns</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Orders History</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Order Tracking</a></li>
-              </ul>
-            </div>
-            <div class="footer__group footer__menu"> 
-              <div class="heading heading-sm footer__heading">Pages </div>
-              <ul class="footer__list"> 
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Blog</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Browse the Shop</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Category</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Pre-Built Pages</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Visual Composer Elements</a></li>
-                <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">WooCommerce Pages</a></li>
-              </ul>
+              <div class="col col-2-4 xl-2-4 lg-4 md-12 sm-12">
+                <div class="footer__group footer__menu"> 
+                  <div class="heading heading-sm footer__heading">Customer Care </div>
+                  <ul class="footer__list"> 
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">My Account</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Discount</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Returns</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Orders History</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Order Tracking</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col col-2-4 xl-2-4 lg-4 md-12 sm-12">
+                <div class="footer__group footer__menu"> 
+                  <div class="heading heading-sm footer__heading">Pages </div>
+                  <ul class="footer__list"> 
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Blog</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Browse the Shop</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Category</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Pre-Built Pages</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">Visual Composer Elements</a></li>
+                    <li class="footer__item"> <a class="footer__link footer__text" href="./404-not-found.html">WooCommerce Pages</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

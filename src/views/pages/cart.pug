@@ -2,6 +2,61 @@ extends ../layout/layout
 
 block vars 
   -title = 'Hekto: Cart'
+block css 
+  link(rel="stylesheet", href="../css/style.css")
+  link(rel="stylesheet", href="../css/cart.css")
 
 block container 
   +mainHeader("Shopping Cart")
+  section.cart-main.container
+    table.cart-table 
+      thead.cart-table__head 
+        tr.cart-table__row
+          th.cart-table__cell
+            h4.cart-table__heading.heading.heading-xs Product 
+          th.cart-table__cell
+            h4.cart-table__heading.heading.heading-xs Price 
+          th.cart-table__cell
+            h4.cart-table__heading.heading.heading-xs Quantity 
+          th.cart-table__cell
+            h4.cart-table__heading.heading.heading-xs Total 
+      tbody.cart-table__body 
+        tr.cart-table__row 
+          td.cart-table__cell
+            .cart-table-product
+              .cart-table-product__img 
+                img(src="../images/products/mini-lcw-chair.png", alt="")
+              .cart-table-product__name Mini LCW Chair
+          td.cart-table__cell
+            .cart-table__price $129
+          td.cart-table__cell
+            input.cart-table__quantity(type="number")
+          td.cart-table__cell
+            .cart-table__total $129
+        tr.cart-table__row 
+          td.cart-table__cell
+            .cart-table-product
+              .cart-table-product__img 
+                img(src="../images/products/mini-lcw-chair.png", alt="")
+              .cart-table-product__name Mini LCW Chair
+          td.cart-table__cell
+            .cart-table__price $129
+          td.cart-table__cell
+            input.cart-table__quantity(type="number")
+          td.cart-table__cell
+            .cart-table__total $129
+        tr.cart-table__row 
+          td.cart-table__cell
+            .cart-table-product
+              .cart-table-product__img 
+                img(src="../images/products/mini-lcw-chair.png", alt="")
+              .cart-table-product__name Mini LCW Chair
+          td.cart-table__cell
+            .cart-table__price $129
+          td.cart-table__cell
+            input.cart-table__quantity(type="number")
+          td.cart-table__cell
+            .cart-table__total $129
+    .cart-action 
+      button.cart-action__btn.btn.btn--md.btn--outline.btn--primary Clear Cart
+      a(href='./product.html').cart-action__btn.btn.btn--md.btn--solid.btn--primary Continue Shopping

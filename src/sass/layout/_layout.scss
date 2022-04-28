@@ -15,6 +15,12 @@
   margin-right: auto;
   overflow-x: hidden;
 }
+.section {
+  &__heading {
+    text-transform: uppercase;
+    margin-bottom: clamp(2.4rem, 5vw, 4.8rem);
+  }
+}
 main {
   margin-top: var(--header-height);
 }

@@ -10,7 +10,6 @@ const onTrendingElements = $$('.col.col-12.xl-12.lg-7.md-12.sm-12, .col.col-6.xl
 const topChairs = $$('.product-top .row > .col');
 const accessories = $('.accessories .row');
 
-
 const app = {
   products: [
     {
@@ -159,6 +158,7 @@ const app = {
     },
   ],
   inCartProducts: [],
+  totalPrice: 0,
 
   handleEvents: function () {
     const _this = this;
@@ -169,7 +169,7 @@ const app = {
       return btn;
     }
 
-    // When clickin on the Add to Cart button
+    // When clicking on the Add to Cart button
     addToCartBtn.forEach(btn => {
       btn.onclick = () => {
         let productItem = getProductFromBtn(btn);
@@ -217,7 +217,7 @@ const app = {
       element.innerHTML = `
         <figure class="product-item on-trending-item on-trending-item--${this.products[i].addClassName}" data-index="${this.products[i].id}" >
           <figcaption class="on-trending-item__name font-secondary">${this.products[i].name}</figcaption>
-          <div class="on-trending-item__img product-item__img"> <img src=${this.products[i].imgSrc} alt="a chair"/></div><span class="on-trending-item__price">${this.products[i].price}$</span>
+          <div class="on-trending-item__img product-item__img"> <img loading="lazy" src=${this.products[i].imgSrc} alt="a chair"/></div><span class="on-trending-item__price">${this.products[i].price}$</span>
           <div class="product-action product-action--bottom-left">
             <button class="product-action__item  product-action__cart"><i class="fa-solid fa-cart-plus"></i></button>
             <button class="product-action__item"><i class="fa-regular fa-heart"></i></button>
@@ -235,7 +235,7 @@ const app = {
       element.innerHTML = `
         <figure class="product-top-item product-item action-rounded obs-transition fade side-half-up" data-index="${this.products[i].id}">
           <div class="product-top-item__top product-item__top">
-            <div class="product-top-item__img product-item__img"> <img src="${this.products[i].imgSrc}" alt="Mini LCW Chair"/></div>
+            <div class="product-top-item__img product-item__img"> <img loading="lazy" src="${this.products[i].imgSrc}" alt="Mini LCW Chair"/></div>
             <div class="product-action product-action--rounded">
               <button class="product-action__item  product-action__cart"><i class="fa-solid fa-cart-plus"></i></button>
               <button class="product-action__item"><i class="fa-regular fa-heart"></i></button>
@@ -256,7 +256,7 @@ const app = {
           `<div class="col col-4 xl-4 lg-6 md-6 sm-12"> 
         <figure class="accessories-item product-item action-horizontal obs-transition fade slide-down" data-index="${product.id}"> 
           <div class="accessories-item__top product-item__top"> 
-            <div class="accessories-item__img product-item__img"> <img src="${product.imgSrc}" alt="${product.name}"/></div>
+            <div class="accessories-item__img product-item__img"> <img loading="lazy" src="${product.imgSrc}" alt="${product.name}"/></div>
             <div class="product-action product-action--horizontal">
               <button class="product-action__item  product-action__cart"><i class="fa-solid fa-cart-plus"></i></button>
               <button class="product-action__item"><i class="fa-regular fa-heart"></i></button>
@@ -324,12 +324,11 @@ const app = {
       saleBannerContentObserver.observe(content);
     })
 
-    /*====================
-      On Trending Products
-    =====================*/
+    /*========
+      Products
+    ========*/
 
     const items = $$('.col.col-12.xl-12.lg-7.md-12.sm-12,.col.col-6.xl-6.lg-12.md-6.sm-12, .product-top-item, .accessories-item, .home-blog-item');
-    console.log(items);
     const itemOptions = {
       rootMargin: '0px 0px -20% 0px',
       threshold: 0,
@@ -370,5 +369,4 @@ const app = {
     this.handleMenu();
     this.handleEvents();
   },
-}
-
+};

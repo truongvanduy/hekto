@@ -53,7 +53,7 @@ mixin offerItem(heading, desc, imgSrc)
     figure.offer-item
       .offer-item__top 
         .offer-item__img 
-          img(srcSet= imgSrc , alt= heading)
+          img(srcSet= imgSrc , loading="lazy", alt= heading)
       .offer-item__bottom
         figcaption.offer-item__heading.heading.heading-sm.heading-center.color-heading.font-primary= heading
         p.offer-item__desc.text.text-md.text-center.font-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
@@ -63,7 +63,7 @@ mixin accessoriesItem(heading, newPrice, oldPrice, imgSrc)
     figure.accessories-item.product-item.action-horizontal  
       .accessories-item__top.product-item__top 
         .accessories-item__img.product-item__img 
-          img(srcSet= imgSrc , alt= heading)
+          img(srcSet= imgSrc , loading="lazy", alt= heading)
         +productActionSet("product-action--horizontal")
           +productActionItem("","fa-solid fa-cart-plus")
           +productActionItem("","fa-regular fa-heart")
@@ -91,13 +91,13 @@ mixin topProductItem(heading, price, imgSrc)
 mixin homeBlogItem(heading, author, date, desc, imgSrc)
   figure.home-blog-item.obs-transition.fade
     .home-blog-item__img 
-      img(srcSet= imgSrc, alt= heading)
+      img(srcSet= imgSrc, loading="lazy", alt= heading)
     .home-blog-item__info.text.text-sm.color-heading.font-primary.color-heading   
       .home-blog-item__info-group 
-        img(src="../images/home/sign.svg", alt="sign")
+        img(src="../images/home/sign.svg", loading="lazy", alt="sign")
         span.home-blog-item__author= author 
       .home-blog-item__info-group  
-        img.home-blog-item__date-img(src="../images/home/date.svg", alt="calendar")
+        img.home-blog-item__date-img(src="../images/home/date.svg", loading="lazy", alt="calendar")
         time.home-blog-item__time= date
     .home-blog-item__content 
       figcaption.home-blog-item__heading.text.text-lg.color-heading.font-primary= heading
@@ -134,5 +134,5 @@ mixin bannerStick(title, caption, desc, imgSrc, btnText= "view all products", al
       p.banner-stick__desc.font-secondary= desc
       button.banner-stick__cta.btn.btn--md.btn--solid.btn--primary= btnText
     .banner-stick__img.obs-transition.slide-left.fade
-      img(src= imgSrc, alt= alt)
+      img(src= imgSrc, loading="lazy", alt= alt)
 

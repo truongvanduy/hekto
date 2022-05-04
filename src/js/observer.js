@@ -45,20 +45,20 @@ saleBannerContents.forEach(content => {
   On Trending Products
 =====================*/
 
-const onTrendingItems = $$('.on-trending-item, .product-top-item, .accessories-item, .home-blog-item');
-const onTrendingItemOptions = {
+const items = $$('.col, .product-top-item, .accessories-item, .home-blog-item');
+const itemOptions = {
   rootMargin: '0px 0px -20% 0px',
   threshold: 0,
 };
-const onTrendingItemObserver = new IntersectionObserver((entries, onTrendingItemsObserver) => {
+const itemObserver = new IntersectionObserver((entries, itemsObserver) => {
   entries.forEach(entry => {
     if (entry.isIntersecting)
       entry.target.classList.add('appear');
   })
-}, onTrendingItemOptions)
+}, itemOptions)
 
-onTrendingItems.forEach(product => {
-  onTrendingItemObserver.observe(product);
+items.forEach(product => {
+  itemObserver.observe(product);
 })
 
 /*=============

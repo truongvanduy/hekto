@@ -115,8 +115,8 @@ mixin mainHeader(title)
           li.breadcrumb__item.breadcrumb__item--active
             a(href="#").breadcrumb__link= title
 
-mixin onTrendingItem(type, name, price, imgSrc)
-  figure(class="product-item on-trending-item on-trending-item--" + type)
+mixin onTrendingItem(type, name, price, imgSrc, dataIndex)
+  figure(class="product-item on-trending-item on-trending-item--" + type, data-index= dataIndex)
       //- figcaption.on-trending-item__name.font-secondary= name
       //- .on-trending-item__img.product-item__img 
       //-   img(src= imgSrc, alt="a chair")

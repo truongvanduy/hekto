@@ -20,3 +20,10 @@ block container
   //- include ../blocks/home/offer
   //- include ../blocks/home/product-featured
   //- include ../blocks/home/banner
+
+block scripts 
+  script(src="../js/app.js")
+  script(src="../js/observer.js") 
+  script.
+    app.renderHomeProducts();
+    app.start();

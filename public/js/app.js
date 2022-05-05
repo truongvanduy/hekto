@@ -9,6 +9,7 @@ const header = $('.header');
 const onTrendingElements = $$('.col.col-12.xl-12.lg-7.md-12.sm-12, .col.col-6.xl-6.lg-12.md-6.sm-12');
 const topChairs = $$('.product-top .row > .col');
 const accessories = $('.accessories .row');
+const PRODUCT_STORAGE_KEY = 'IN_CART_PRODUCT';
 
 const app = {
   products: [
@@ -159,10 +160,26 @@ const app = {
   ],
   inCartProducts: [],
   totalPrice: 0,
+  storageProducts: JSON.parse(localStorage.getItem(PRODUCT_STORAGE_KEY)) || {},
 
+  setStorageProduct: function (key, value) {
+    this.storageProducts[key] = value;
+    localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(this.storageProducts));
+  },
+  loadStorageProduct: function () {
+    for (let id in this.storageProducts)
+      this.inCartProducts.push(this.storageProducts[id]);
+  },
+  updateTotalPrice: function () {
+    this.totalPrice = this.inCartProducts.reduce((prevPrice, currentProduct) => {
+      return prevPrice + currentProduct.price * currentProduct.quantity;
+    }, 0);
+    return this.totalPrice;
+  },
   handleEvents: function () {
     const _this = this;
     const addToCartBtn = $$(".product-action__cart");
+
     function getProductFromBtn(btn) {
       while (btn && !btn.matches('figure.product-item'))
         btn = btn.parentElement;
@@ -174,11 +191,13 @@ const app = {
       btn.onclick = () => {
         let productItem = getProductFromBtn(btn);
         if (productItem) {
-          let chosenProduct = _this.products[productItem.dataset.index - 1];
+          let chosenProduct = this.products[productItem.dataset.index - 1];
           chosenProduct.quantity++;
-          if (!_this.inCartProducts.includes(chosenProduct))
-            _this.inCartProducts.push(chosenProduct);
-          console.log(_this.inCartProducts);
+          if (!this.inCartProducts.includes(chosenProduct))
+            this.inCartProducts.push(chosenProduct);
+          console.log(this.inCartProducts);
+          console.log(this.updateTotalPrice());
+          this.setStorageProduct(chosenProduct.id, chosenProduct);
         }
       }
     });
@@ -273,12 +292,6 @@ const app = {
     });
   },
   renderProductList: function () {
-
-  },
-  renderHomeProducts: function () {
-    this.renderTrendingProducts();
-    this.renderTopChairs();
-    this.renderAccessories();
   },
   addHomeAnimation: function () {
     /*=====================
@@ -364,7 +377,13 @@ const app = {
       stickBannerObserver.observe(banner);
     });
   },
+  renderHomeProducts: function () {
+    this.renderTrendingProducts();
+    this.renderTopChairs();
+    this.renderAccessories();
+  },
   start: function () {
+    this.loadStorageProduct();
     this.handleHeader();
     this.handleMenu();
     this.handleEvents();

@@ -66,17 +66,44 @@
   &-action {
     @include flexCenterY();
     gap: 0 1.6rem;
+    position: relative;
     &__group {
       cursor: pointer;
       @include flexCenterY();
       gap: 0 0.4rem;
     }
     &__icon {
-      padding-bottom: 0.2rem;
+      margin-bottom: 0.4rem;
+      width: 2rem;
+      height: 2rem;
     }
   }
   &-cart {
     padding-left: 1rem;
+    &__img {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+    &__qty {
+      position: absolute;
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 100rem;
+      background-color: white;
+      top: -0.4rem;
+      right: -0.6rem;
+      color: $violet-color;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      &.has-product {
+        display: flex;
+      }
+    }
   }
   &-bottom {
     height: var(--nav-bottom-height);

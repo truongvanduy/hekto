@@ -9,6 +9,7 @@ const header = $('.header');
 const onTrendingElements = $$('.col.col-12.xl-12.lg-7.md-12.sm-12, .col.col-6.xl-6.lg-12.md-6.sm-12');
 const topChairs = $$('.product-top .row > .col');
 const accessories = $('.accessories .row');
+const navCartQty = $('.nav-cart__qty');
 const PRODUCT_STORAGE_KEY = 'IN_CART_PRODUCT';
 
 const app = {
@@ -159,22 +160,25 @@ const app = {
     },
   ],
   inCartProducts: [],
-  totalPrice: 0,
   storageProducts: JSON.parse(localStorage.getItem(PRODUCT_STORAGE_KEY)) || {},
-
   setStorageProduct: function (key, value) {
     this.storageProducts[key] = value;
     localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(this.storageProducts));
   },
-  loadStorageProduct: function () {
-    for (let id in this.storageProducts)
-      this.inCartProducts.push(this.storageProducts[id]);
+  loadStorageProducts: function () {
+    for (let id in this.storageProducts) {
+      this.products[id - 1].quantity = this.storageProducts[id].quantity;
+    }
   },
-  updateTotalPrice: function () {
-    this.totalPrice = this.inCartProducts.reduce((prevPrice, currentProduct) => {
+  getTotalPrice: function () {
+    return this.inCartProducts.reduce((prevPrice, currentProduct) => {
       return prevPrice + currentProduct.price * currentProduct.quantity;
     }, 0);
-    return this.totalPrice;
+  },
+  getProductQuantity: function () {
+    return this.inCartProducts.reduce((prevQty, currentProduct) =>
+      prevQty + currentProduct.quantity
+      , 0)
   },
   handleEvents: function () {
     const _this = this;
@@ -195,14 +199,15 @@ const app = {
           chosenProduct.quantity++;
           if (!this.inCartProducts.includes(chosenProduct))
             this.inCartProducts.push(chosenProduct);
-          console.log(this.inCartProducts);
-          console.log(this.updateTotalPrice());
+          console.log(this.getTotalPrice());
           this.setStorageProduct(chosenProduct.id, chosenProduct);
+          this.updateCartIcon();
+          this.updateInCartProducts();
         }
       }
     });
   },
-  handleHeader: function () {  // Hide header when scrolling down
+  toggleHeader: function () {  // Hide header when scrolling down
     let currentPosition = 0;
     window.onscroll = e => {
       let newPosition = document.documentElement.scrollTop;
@@ -220,13 +225,17 @@ const app = {
       menu.classList.toggle("opened");
     }
   },
-  updateProductList: function () {
-  },
-  updateInCartProductsList: function () {
-
-  },
   updateCartIcon: function () {
-
+    let productQty = this.inCartProducts.length;
+    if (productQty !== 0)
+      navCartQty.classList.add('has-product');
+    else
+      navCartQty.classList.remove('has-product');
+    navCartQty.innerText = `${this.getProductQuantity()}`;
+  },
+  updateInCartProducts: function (productItem) {
+    this.inCartProducts = this.products.filter(product =>
+      product.quantity !== 0);
   },
   renderTrendingProducts: function () {
     let i = 0;
@@ -383,8 +392,10 @@ const app = {
     this.renderAccessories();
   },
   start: function () {
-    this.loadStorageProduct();
-    this.handleHeader();
+    this.loadStorageProducts();
+    this.updateInCartProducts();
+    this.updateCartIcon();
+    this.toggleHeader();
     this.handleMenu();
     this.handleEvents();
   },

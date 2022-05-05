@@ -61,7 +61,9 @@
         transform: translateY(0);
       }
       &-left,
-      &-right {
+      &-right,
+      &-half-left,
+      &-half-right {
         transform: translateX(0);
       }
     }

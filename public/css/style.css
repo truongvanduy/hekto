@@ -2012,6 +2012,7 @@ main {
   display: flex;
   align-items: center;
   gap: 0 1.6rem;
+  position: relative;
 }
 .nav-action__group {
   cursor: pointer;
@@ -2020,10 +2021,36 @@ main {
   gap: 0 0.4rem;
 }
 .nav-action__icon {
-  padding-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+  width: 2rem;
+  height: 2rem;
 }
 .nav-cart {
   padding-left: 1rem;
+}
+.nav-cart__img {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+.nav-cart__qty {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 100rem;
+  background-color: white;
+  top: -0.4rem;
+  right: -0.6rem;
+  color: #7E33E0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.nav-cart__qty.has-product {
+  display: flex;
 }
 .nav-bottom {
   height: var(--nav-bottom-height);
@@ -2533,7 +2560,7 @@ main {
   .appear.slide-up, .appear.slide-down, .appear.slide-half-up, .appear.slide-half-down {
     transform: translateY(0);
   }
-  .appear.slide-left, .appear.slide-right {
+  .appear.slide-left, .appear.slide-right, .appear.slide-half-left, .appear.slide-half-right {
     transform: translateX(0);
   }
 }

@@ -196,6 +196,10 @@ ul, ol {
   margin-left: auto;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -1111,6 +1115,11 @@ body::-webkit-scrollbar-thumb:active {
   flex-direction: column;
   height: 100%;
   padding: 1.6rem;
+  transition: all 0.2s linear;
+  position: relative;
+}
+.on-trending-item:hover {
+  background-color: transparent;
 }
 .on-trending-item--md .on-trending-item__img {
   width: min(90%, 18rem);
@@ -1214,7 +1223,6 @@ body::-webkit-scrollbar-thumb:active {
 
 .col {
   padding: var(--gutter);
-  overflow: hidden;
 }
 .col-0 {
   display: none;
@@ -2510,19 +2518,19 @@ main {
 
 @media screen and (min-width: 991.98px) {
   .obs-transition {
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   .obs-transition.btn, .obs-transition.product-item:not(.on-trending-item) {
-    transition: all 0.25s linear, opacity 1s ease-out, transform 1s ease-out;
+    transition: all 0.25s linear, opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   .obs-delay-quarter {
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
   }
   .obs-delay-half {
-    transition-delay: 0.5s;
+    transition-delay: 0.4s;
   }
   .obs-delay-full {
-    transition-delay: 1s;
+    transition-delay: 0.8s;
   }
 
   .fade {

@@ -134,6 +134,6 @@ mixin bannerStick(title, caption, desc, imgSrc, btnText= "view all products", al
       p.banner-stick__caption= caption 
       p.banner-stick__desc.font-secondary= desc
       a(href= POPLink).banner-stick__cta.btn.btn--md.btn--solid.btn--primary= btnText
-    .banner-stick__img.obs-transition.slide-half-left.fade
+    .banner-stick__img
       img(src= imgSrc, loading="lazy", alt= alt)
 

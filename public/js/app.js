@@ -282,7 +282,7 @@ const app = {
       if (product.category === 'accessories')
         accessories.innerHTML +=
           `<div class="col col-4 xl-4 lg-6 md-6 sm-12"> 
-        <figure class="accessories-item product-item action-horizontal obs-transition fade slide-down" data-index="${product.id}"> 
+        <figure class="accessories-item product-item action-horizontal obs-transition fade" data-index="${product.id}"> 
           <div class="accessories-item__top product-item__top"> 
             <div class="accessories-item__img product-item__img"> <img loading="lazy" src="${product.imgSrc}" alt="${product.name}"/></div>
             <div class="product-action product-action--horizontal">
@@ -347,7 +347,7 @@ const app = {
     })
 
     /*========
-      Products
+      Others
     ========*/
 
     const items = $$('.col.col-12.xl-12.lg-7.md-12.sm-12,.col.col-6.xl-6.lg-12.md-6.sm-12, .product-top-item, .accessories-item, .home-blog-item');
@@ -367,23 +367,23 @@ const app = {
     })
 
     /*=============
-      Stick Banners
+      Banners
     ==============*/
 
-    const stickBanners = $$('.banner-stick__content, .banner-stick__img, .banner-side__img, .banner-side__content');
-    const stickBannerOptions = {
-      rootMargin: '0px 0px -50% 0px',
+    const banners = $$('.banner-stick__content, .banner-stick__img, .banner-side__img, .banner-side__content');
+    const bannerOptions = {
+      rootMargin: '0px 0px -30% 0px',
       threshold: 0,
     };
-    const stickBannerObserver = new IntersectionObserver((entries, stickBannersObserver) => {
+    const bannerObserver = new IntersectionObserver((entries, bannersObserver) => {
       entries.forEach(entry => {
         if (entry.isIntersecting)
           entry.target.classList.add('appear');
       })
-    }, stickBannerOptions);
+    }, bannerOptions);
 
-    stickBanners.forEach(banner => {
-      stickBannerObserver.observe(banner);
+    banners.forEach(banner => {
+      bannerObserver.observe(banner);
     });
   },
   renderHomeProducts: function () {

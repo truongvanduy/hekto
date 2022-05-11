@@ -9,59 +9,42 @@ block css
 block container 
   +mainHeader("Shopping Cart")
   section.cart-main.container
-    table.cart-table 
-      thead.cart-table__head 
-        tr.cart-table__row
-          th.cart-table__cell
-            h4.cart-table__heading.heading.heading-xs Product 
-          th.cart-table__cell
-            h4.cart-table__heading.heading.heading-xs Price 
-          th.cart-table__cell
-            h4.cart-table__heading.heading.heading-xs Quantity 
-          th.cart-table__cell
-            h4.cart-table__heading.heading.heading-xs Total 
-      tbody.cart-table__body 
-        tr.cart-table__row 
-          td.cart-table__cell
-            .cart-table-product
-              .cart-table-product__img 
-                img(src="../images/products/mini-lcw-chair.png", alt="")
-              .cart-table-product__name Mini LCW Chair
-          td.cart-table__cell
-            .cart-table__price $129
-          td.cart-table__cell
-            input.cart-table__quantity(type="number")
-          td.cart-table__cell
-            .cart-table__total $129
-        tr.cart-table__row 
-          td.cart-table__cell
-            .cart-table-product
-              .cart-table-product__img 
-                img(src="../images/products/mini-lcw-chair.png", alt="")
-              .cart-table-product__name Mini LCW Chair
-          td.cart-table__cell
-            .cart-table__price $129
-          td.cart-table__cell
-            input.cart-table__quantity(type="number")
-          td.cart-table__cell
-            .cart-table__total $129
-        tr.cart-table__row 
-          td.cart-table__cell
-            .cart-table-product
-              .cart-table-product__img 
-                img(src="../images/products/mini-lcw-chair.png", alt="")
-              .cart-table-product__name Mini LCW Chair
-          td.cart-table__cell
-            .cart-table__price $129
-          td.cart-table__cell
-            input.cart-table__quantity(type="number")
-          td.cart-table__cell
-            .cart-table__total $129
-    .cart-action 
-      button.cart-action__btn.btn.btn--md.btn--outline.btn--primary Clear Cart
-      a(href='./product.html').cart-action__btn.btn.btn--md.btn--solid.btn--primary Continue Shopping
+    .layout_left
+      table.cart-table
+        thead.cart-table__head
+          tr.cart-table__row
+            th.cart-table__cell
+              h4.cart-table__heading.heading.heading-xs Product 
+            th.cart-table__cell
+              h4.cart-table__heading.heading.heading-xs Price 
+            th.cart-table__cell
+              h4.cart-table__heading.heading.heading-xs Quantity 
+            th.cart-table__cell
+              h4.cart-table__heading.heading.heading-xs Total 
+            th.cart-table__cell
+              h4.cart-table__heading.heading.heading-xs Delete 
+        tbody.cart-table__body
+          
+      .cart-action
+        a.cart-action__btn.btn.btn--md.btn--solid.btn--primary Clear Cart
+        a.cart-action__btn.btn.btn--md.btn--solid.btn--primary(href='./product.html') Continue Shopping
+    section.layout_right
+      h1#title-total Invoice information
+      .Total_abc
+        span.Total Total:
+        span.Total_a.invoice-qty
+      .Total_abc
+        span.Total_money Cart total:
+        span.Total_b.invoice-total
+      #b1.Code_abc
+        input#code.code_text(onclick='clearErrorMessage()' type='text' placeholder='Enter discount code (if any)')
+      .Total_abc
+        | Into money:
+        span.Total_c.invoice-total
+      button.button_table_b1.btn.btn--md.btn--primary.btn--solid Checkout
 
 block scripts 
   script(src="../js/app.js")
+  script(src="../js/cart.js") 
   script.
-    app.start();
+    app.startCart();

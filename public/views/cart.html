@@ -38,7 +38,7 @@
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./product.html">Products</a></li>
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./404-not-found.html">Blog</a></li>
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./404-not-found.html">Contact</a></li>
-                <li class="menu__item mobile menu__nav-top"> <a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></a><a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></a><a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Cart</span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></a><a class="nav-contact__group menu__nav-top-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group menu__nav-top-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
+                <li class="menu__item mobile menu__nav-top"> <a class="nav-action__group" href=""><span class="nav-action__text">Login</span><img class="nav-action__icon menu__nav-top-item in-menu" src="../images/base/user.svg" alt="user"/></a><a class="nav-action__group" href=""><span class="nav-action__text">Wishlist</span><img class="nav-action__icon menu__nav-top-item in-menu" src="../images/base/heart.svg" alt="heart"/></a><a class="nav-action__group" href="./cart.html"><span class="nav-action__text">Cart</span><img class="nav-action__icon menu__nav-top-item in-menu" src="../images/base/cart.svg" alt="cart"/><span class="nav-cart__qty in-menu"></span></a><a class="nav-contact__group menu__nav-top-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group menu__nav-top-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
                 </li>
               </ul>
               <div class="overlay tablet"></div><a class="heading heading-lg logo header__logo" href="./index.html">Hekto</a>
@@ -70,80 +70,41 @@
           </div>
         </section>
         <section class="cart-main container">
-          <table class="cart-table"> 
-            <thead class="cart-table__head"> 
-              <tr class="cart-table__row">
-                <th class="cart-table__cell">
-                  <h4 class="cart-table__heading heading heading-xs">Product </h4>
-                </th>
-                <th class="cart-table__cell">
-                  <h4 class="cart-table__heading heading heading-xs">Price </h4>
-                </th>
-                <th class="cart-table__cell">
-                  <h4 class="cart-table__heading heading heading-xs">Quantity </h4>
-                </th>
-                <th class="cart-table__cell">
-                  <h4 class="cart-table__heading heading heading-xs">Total </h4>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="cart-table__body"> 
-              <tr class="cart-table__row"> 
-                <td class="cart-table__cell">
-                  <div class="cart-table-product">
-                    <div class="cart-table-product__img"> <img src="../images/products/mini-lcw-chair.png" alt=""></div>
-                    <div class="cart-table-product__name">Mini LCW Chair</div>
-                  </div>
-                </td>
-                <td class="cart-table__cell">
-                  <div class="cart-table__price">$129</div>
-                </td>
-                <td class="cart-table__cell">
-                  <input class="cart-table__quantity" type="number">
-                </td>
-                <td class="cart-table__cell">
-                  <div class="cart-table__total">$129</div>
-                </td>
-              </tr>
-              <tr class="cart-table__row"> 
-                <td class="cart-table__cell">
-                  <div class="cart-table-product">
-                    <div class="cart-table-product__img"> <img src="../images/products/mini-lcw-chair.png" alt=""></div>
-                    <div class="cart-table-product__name">Mini LCW Chair</div>
-                  </div>
-                </td>
-                <td class="cart-table__cell">
-                  <div class="cart-table__price">$129</div>
-                </td>
-                <td class="cart-table__cell">
-                  <input class="cart-table__quantity" type="number">
-                </td>
-                <td class="cart-table__cell">
-                  <div class="cart-table__total">$129</div>
-                </td>
-              </tr>
-              <tr class="cart-table__row"> 
-                <td class="cart-table__cell">
-                  <div class="cart-table-product">
-                    <div class="cart-table-product__img"> <img src="../images/products/mini-lcw-chair.png" alt=""></div>
-                    <div class="cart-table-product__name">Mini LCW Chair</div>
-                  </div>
-                </td>
-                <td class="cart-table__cell">
-                  <div class="cart-table__price">$129</div>
-                </td>
-                <td class="cart-table__cell">
-                  <input class="cart-table__quantity" type="number">
-                </td>
-                <td class="cart-table__cell">
-                  <div class="cart-table__total">$129</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="cart-action"> 
-            <button class="cart-action__btn btn btn--md btn--outline btn--primary">Clear Cart</button><a class="cart-action__btn btn btn--md btn--solid btn--primary" href="./product.html">Continue Shopping</a>
+          <div class="layout_left">
+            <table class="cart-table">
+              <thead class="cart-table__head">
+                <tr class="cart-table__row">
+                  <th class="cart-table__cell">
+                    <h4 class="cart-table__heading heading heading-xs">Product </h4>
+                  </th>
+                  <th class="cart-table__cell">
+                    <h4 class="cart-table__heading heading heading-xs">Price </h4>
+                  </th>
+                  <th class="cart-table__cell">
+                    <h4 class="cart-table__heading heading heading-xs">Quantity </h4>
+                  </th>
+                  <th class="cart-table__cell">
+                    <h4 class="cart-table__heading heading heading-xs">Total </h4>
+                  </th>
+                  <th class="cart-table__cell">
+                    <h4 class="cart-table__heading heading heading-xs">Delete </h4>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="cart-table__body"></tbody>
+            </table>
+            <div class="cart-action"><a class="cart-action__btn btn btn--md btn--solid btn--primary">Clear Cart</a><a class="cart-action__btn btn btn--md btn--solid btn--primary" href="./product.html">Continue Shopping</a></div>
           </div>
+          <section class="layout_right">
+            <h1 id="title-total">Invoice information</h1>
+            <div class="Total_abc"><span class="Total">Total:</span><span class="Total_a invoice-qty"></span></div>
+            <div class="Total_abc"><span class="Total_money">Cart total:</span><span class="Total_b invoice-total"></span></div>
+            <div class="Code_abc" id="b1">
+              <input class="code_text" id="code" onclick="clearErrorMessage()" type="text" placeholder="Enter discount code (if any)">
+            </div>
+            <div class="Total_abc">Into money:<span class="Total_c invoice-total"></span></div>
+            <button class="button_table_b1 btn btn--md btn--primary btn--solid">Checkout</button>
+          </section>
         </section>
       </main>
       <footer class="footer"> 
@@ -212,6 +173,7 @@
       </footer>
     </div>
     <script src="../js/app.js"></script>
-    <script>app.start();</script>
+    <script src="../js/cart.js"> </script>
+    <script>app.startCart();</script>
   </body>
 </html>

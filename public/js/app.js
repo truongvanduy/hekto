@@ -9,7 +9,9 @@ const header = $('.header');
 const onTrendingElements = $$('.col.col-12.xl-12.lg-7.md-12.sm-12, .col.col-6.xl-6.lg-12.md-6.sm-12');
 const topChairs = $$('.product-top .row > .col');
 const accessories = $('.accessories .row');
-const navCartQty = $('.nav-cart__qty');
+const navCartQty = $$('.nav-cart__qty');
+const invoiceQty = $('.invoice-qty');
+const invoiceTotal = $$('.invoice-total');
 const PRODUCT_STORAGE_KEY = 'IN_CART_PRODUCT';
 
 const app = {
@@ -165,6 +167,10 @@ const app = {
     this.storageProducts[key] = value;
     localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(this.storageProducts));
   },
+  removeStorageProduct: function (key) {
+    delete this.storageProducts[key];
+    localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(this.storageProducts));
+  },
   loadStorageProducts: function () {
     for (let id in this.storageProducts) {
       this.products[id - 1].quantity = this.storageProducts[id].quantity;
@@ -181,19 +187,20 @@ const app = {
       , 0)
   },
   handleEvents: function () {
-    const _this = this;
-    const addToCartBtn = $$(".product-action__cart");
+    const addToCartBtns = $$(".product-action__cart");
+    let removeBtns = $$(".remove-btn");
 
-    function getProductFromBtn(btn) {
-      while (btn && !btn.matches('figure.product-item'))
-        btn = btn.parentElement;
-      return btn;
+    function getParentElement(element, selector) {
+      while (element && !element.matches(selector))
+        element = element.parentElement;
+      return element;
     }
 
     // When clicking on the Add to Cart button
-    addToCartBtn.forEach(btn => {
+    console.log(addToCartBtns);
+    addToCartBtns.forEach(btn => {
       btn.onclick = () => {
-        let productItem = getProductFromBtn(btn);
+        let productItem = getParentElement(btn, '.product-item');
         if (productItem) {
           let chosenProduct = this.products[productItem.dataset.index - 1];
           chosenProduct.quantity++;
@@ -206,6 +213,40 @@ const app = {
         }
       }
     });
+
+    // When clicking on the Remove product btn
+    removeBtns.forEach((btn, index) => {
+      btn.onclick = () => {
+        let productRow = getParentElement(btn, '.product-row');
+        if (productRow) {
+          let chosenProduct = this.products[productRow.dataset.index - 1];
+          chosenProduct.quantity = 0;
+          this.removeStorageProduct(chosenProduct.id);
+          this.loadStorageProducts();
+          this.updateCartIcon();
+          this.updateInCartProducts();
+          productRow.remove();
+          this.updateInvoice();
+        }
+      }
+    });
+
+    // When adjusting the product quantity
+    let changeQtyBtns = $$('.cart-table__quantity');
+    changeQtyBtns.forEach(btn => {
+      btn.onchange = () => {
+        let productRow = getParentElement(btn, '.product-row');
+        let chosenProduct = this.products[productRow.dataset.index - 1];
+        chosenProduct.quantity = Number(btn.value);
+        let productPrice = chosenProduct.quantity * chosenProduct.price;
+        this.setStorageProduct(chosenProduct.id, chosenProduct);
+        this.loadStorageProducts();
+        this.updateCartIcon();
+        this.updateInCartProducts();
+        productRow.querySelector('.cart-table__total').innerText = `$${productPrice}`;
+        this.updateInvoice();
+      }
+    })
   },
   toggleHeader: function () {  // Hide header when scrolling down
     let currentPosition = 0;
@@ -227,13 +268,22 @@ const app = {
   },
   updateCartIcon: function () {
     let productQty = this.inCartProducts.length;
-    if (productQty !== 0)
-      navCartQty.classList.add('has-product');
-    else
-      navCartQty.classList.remove('has-product');
-    navCartQty.innerText = `${this.getProductQuantity()}`;
+    navCartQty.forEach(span => {
+      if (productQty !== 0)
+        span.classList.add('has-product');
+      else
+        span.classList.remove('has-product');
+      span.innerText = `${this.getProductQuantity()}`;
+    })
+
   },
-  updateInCartProducts: function (productItem) {
+  updateInvoice: function () {
+    invoiceQty.innerText = this.getProductQuantity();
+    invoiceTotal.forEach(span => {
+      span.innerText = `$${this.getTotalPrice()}`;
+    })
+  },
+  updateInCartProducts: function () {
     this.inCartProducts = this.products.filter(product =>
       product.quantity !== 0);
   },
@@ -301,6 +351,54 @@ const app = {
     });
   },
   renderProductList: function () {
+    const productContainer = document.querySelector('.grid-container__product.container');
+
+    this.products.forEach(product => {
+      productContainer.innerHTML +=
+        `
+      <figure class="product-latest-item product-item product-item action-vertical" data-index="${product.id}">
+      <div class="product-latest-item__top product-item__top"> 
+        <div class="product-latest-item__img product-item__img"> <img src="${product.imgSrc}" alt="${product.name}"/></div>
+        <div class="product-action product-action--vertical">
+          <button class="product-action__item product-action__cart"><i class="fa-solid fa-cart-plus"></i></button>
+          <button class="product-action__item"><i class="fa-regular fa-heart"></i></button>
+          <button class="product-action__item"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+      <div class="product-latest-item__bottom product-item__bottom"> 
+        <figcaption class="product-latest-item__heading text text-lg color-heading font-primary">${product.name}</figcaption>
+        <div class="product-latest-item-price"><span class="product-latest-item-price__new text text-md color-heading">$${product.price}</span>
+        </div>
+      </div>
+    </figure>`
+    });
+  },
+  renderInCartProducts: function () {
+    const productContainer = $('.cart-table__body');
+    productContainer.innerHTML = '';
+    this.inCartProducts.forEach(product => {
+      productContainer.innerHTML +=
+        `<tr class="cart-table__row product-row" data-index="${product.id}">
+          <td class="cart-table__cell">
+              <div class="cart-table-product">
+                <div class="cart-table-product__img"><img src="${product.imgSrc}" alt="${product.name}"></div>
+                <div class="cart-table-product__name">${product.name}</div>
+              </div>
+            </td>
+            <td class="cart-table__cell">
+              <div class="cart-table__price">$${product.price}</div>
+            </td>
+            <td class="cart-table__cell">
+              <input class="cart-table__quantity" type="number" value="${product.quantity}" min="1" max="10">
+            </td>
+            <td class="cart-table__cell">
+              <div class="cart-table__total">$${product.price * product.quantity}</div>
+            </td>
+            <td class="cart-table__cell"><i class="fa fa-times remove-btn"></i>
+          </td>
+        </tr>
+        `
+    })
   },
   addHomeAnimation: function () {
     /*=====================
@@ -391,6 +489,10 @@ const app = {
     this.renderTopChairs();
     this.renderAccessories();
   },
+  renderCartPage: function () {
+    this.renderInCartProducts();
+    this.updateInvoice();
+  },
   start: function () {
     this.loadStorageProducts();
     this.updateInCartProducts();
@@ -399,4 +501,13 @@ const app = {
     this.handleMenu();
     this.handleEvents();
   },
+  startCart: function () {
+    this.loadStorageProducts();
+    this.updateInCartProducts();
+    this.updateCartIcon();
+    this.toggleHeader();
+    this.handleMenu();
+    this.renderCartPage();
+    this.handleEvents();
+  }
 };

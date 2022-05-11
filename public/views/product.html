@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&amp;family=Lato:wght@300;400;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/product.css">
     <title>Hekto: Products</title>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   </head>
@@ -37,7 +38,7 @@
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./product.html">Products</a></li>
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./404-not-found.html">Blog</a></li>
                 <li class="menu__item"> <a class="menu__link text-lg color-heading" href="./404-not-found.html">Contact</a></li>
-                <li class="menu__item mobile menu__nav-top"> <a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Login</span><img class="nav-action__icon" src="../images/base/user.svg" alt="user"/></a><a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Wishlist</span><img class="nav-action__icon" src="../images/base/heart.svg" alt="heart"/></a><a class="nav-action__group" href="menu__nav-top-item mobile-reverse"><span class="nav-action__text">Cart</span><img class="nav-action__icon" src="../images/base/cart.svg" alt="cart"/></a><a class="nav-contact__group menu__nav-top-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group menu__nav-top-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
+                <li class="menu__item mobile menu__nav-top"> <a class="nav-action__group" href=""><span class="nav-action__text">Login</span><img class="nav-action__icon menu__nav-top-item in-menu" src="../images/base/user.svg" alt="user"/></a><a class="nav-action__group" href=""><span class="nav-action__text">Wishlist</span><img class="nav-action__icon menu__nav-top-item in-menu" src="../images/base/heart.svg" alt="heart"/></a><a class="nav-action__group" href="./cart.html"><span class="nav-action__text">Cart</span><img class="nav-action__icon menu__nav-top-item in-menu" src="../images/base/cart.svg" alt="cart"/><span class="nav-cart__qty in-menu"></span></a><a class="nav-contact__group menu__nav-top-item" href="mailto: mhhasanul@gmail.com"> <img class="nav-contact__icon" src="../images/base/mail.svg" alt="email"/><span class="nav-contact__text">mhhasanul@gmail.com</span></a><a class="nav-contact__group menu__nav-top-item" href="tel: (12345)67890"> <img class="nav-contact__icon" src="../images/base/phone.svg" alt="telephone"/><span class="nav-contact__text">(12345)67890</span></a>
                 </li>
               </ul>
               <div class="overlay tablet"></div><a class="heading heading-lg logo header__logo" href="./index.html">Hekto</a>
@@ -68,6 +69,31 @@
             </nav>
           </div>
         </section>
+        <div class="page_sort_by container">
+          <h3>Ecommerce Acceories & Fashion item </h3>
+          <div class="page_sort_bottom">
+            <label for="perpage">Per Page:</label>
+            <input id="perpage" type="number" name="Per Page" value="1">
+            <label for="sort">Sort By:</label>
+            <select id="sort" size="1">
+              <option>Best Match</option>
+              <option>Top Sale</option>
+              <option>Popular</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid-container__product container"></div>
+        <div class="page_change container">
+          <form action="#">
+            <button class="bton"><i class="fa-solid fa-angles-left"></i></button>
+            <button class="bton"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="bton"><i class="fa-regular fa-1"></i></button>
+            <button class="bton"><i class="fa-regular fa-2"></i></button>
+            <button class="bton"><i class="fa-regular fa-3"></i></button>
+            <button class="bton"><i class="fa-solid fa-angle-right"></i></button>
+            <button class="bton"><i class="fa-solid fa-angles-right"></i></button>
+          </form>
+        </div>
       </main>
       <footer class="footer"> 
         <div class="footer-top"> 

@@ -66,8 +66,8 @@
   &-action {
     @include flexCenterY();
     gap: 0 1.6rem;
-    position: relative;
     &__group {
+      position: relative;
       cursor: pointer;
       @include flexCenterY();
       gap: 0 0.4rem;
@@ -100,6 +100,20 @@
       line-height: 1.6rem;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
+      &.in-menu {
+        width: unset;
+        position: unset;
+        color: $text-color;
+        font-size: 0.8em;
+        font-weight: normal;
+        flex-wrap: nowrap;
+        &::before {
+          content: "(";
+        }
+        &::after {
+          content: ")";
+        }
+      }
       &.has-product {
         display: flex;
       }
@@ -131,11 +145,8 @@
       width: 2rem;
     }
     &-action {
-      &__group.mobile-reverse {
-        flex-direction: row-reverse;
-        & .nav-action__icon {
-          width: 2rem;
-        }
+      &__icon.in-menu {
+        display: none;
       }
     }
   }

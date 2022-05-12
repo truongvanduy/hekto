@@ -29,17 +29,17 @@ block container
         a.cart-action__btn.btn.btn--md.btn--solid.btn--primary Clear Cart
         a.cart-action__btn.btn.btn--md.btn--solid.btn--primary(href='./product.html') Continue Shopping
     section.layout_right
-      h1#title-total Invoice information
+      h1#title-total.heading ORDER SUMMARY
       .Total_abc
-        span.Total Total:
+        span.Total Quantity:
         span.Total_a.invoice-qty
       .Total_abc
-        span.Total_money Cart total:
+        span.Total_money Subtotal:
         span.Total_b.invoice-total
       #b1.Code_abc
         input#code.code_text(onclick='clearErrorMessage()' type='text' placeholder='Enter discount code (if any)')
       .Total_abc
-        | Into money:
+        span Cart total:
         span.Total_c.invoice-total
       button.button_table_b1.btn.btn--md.btn--primary.btn--solid Checkout
 

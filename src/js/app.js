@@ -237,6 +237,8 @@ const app = {
       btn.onchange = () => {
         let productRow = getParentElement(btn, '.product-row');
         let chosenProduct = this.products[productRow.dataset.index - 1];
+        if (btn.value === '')
+          btn.value = '1';
         chosenProduct.quantity = Number(btn.value);
         let productPrice = chosenProduct.quantity * chosenProduct.price;
         this.setStorageProduct(chosenProduct.id, chosenProduct);
@@ -389,7 +391,7 @@ const app = {
               <div class="cart-table__price">$${product.price}</div>
             </td>
             <td class="cart-table__cell">
-              <input class="cart-table__quantity" type="number" value="${product.quantity}" min="1" max="10">
+              <input class="cart-table__quantity" type="number" value="${product.quantity}" min="1" max="10" onkeypress="return false;"">
             </td>
             <td class="cart-table__cell">
               <div class="cart-table__total">$${product.price * product.quantity}</div>

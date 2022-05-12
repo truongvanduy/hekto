@@ -197,7 +197,6 @@ const app = {
     }
 
     // When clicking on the Add to Cart button
-    console.log(addToCartBtns);
     addToCartBtns.forEach(btn => {
       btn.onclick = () => {
         let productItem = getParentElement(btn, '.product-item');
@@ -206,7 +205,6 @@ const app = {
           chosenProduct.quantity++;
           if (!this.inCartProducts.includes(chosenProduct))
             this.inCartProducts.push(chosenProduct);
-          console.log(this.getTotalPrice());
           this.setStorageProduct(chosenProduct.id, chosenProduct);
           this.updateCartIcon();
           this.updateInCartProducts();
@@ -249,6 +247,20 @@ const app = {
         this.updateInvoice();
       }
     })
+
+    // When clicking on the clear cart button
+    let clearCartBtn = $('.clear-cart-btn');
+    if (clearCartBtn) {
+      clearCartBtn.onclick = () => {
+        localStorage.removeItem(PRODUCT_STORAGE_KEY);
+        this.products.forEach(product => {
+          product.quantity = 0;
+        });
+        this.updateInCartProducts();
+        this.updateCartIcon();
+        this.renderCartPage();
+      }
+    }
   },
   toggleHeader: function () {  // Hide header when scrolling down
     let currentPosition = 0;
@@ -391,7 +403,7 @@ const app = {
               <div class="cart-table__price">$${product.price}</div>
             </td>
             <td class="cart-table__cell">
-              <input class="cart-table__quantity" type="number" value="${product.quantity}" min="1" max="10" onkeypress="return false;"">
+              <input class="cart-table__quantity" type="number" value="${product.quantity}" min="1" max="10">
             </td>
             <td class="cart-table__cell">
               <div class="cart-table__total">$${product.price * product.quantity}</div>
